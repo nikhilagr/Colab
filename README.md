@@ -7,7 +7,7 @@
 
 ## Overview
 ### Description
-Colab is a simple to-do list and task manager app that helps you keep track of your tasks.Colab can be used by individual as well as by organizations to organize tasks within groups according to priority. 
+Colab is a task manager app that helps you organize,plan,track your tasks.Colab can be used by individual as well as by organizations. It allows to create a new task or project add members to project and assign subtasks to them.Colab will notify you about upcoming deadlines project deliverables through push notifications and email.
 
 ### App Evaluation
 - Category: Task/Work Management 
