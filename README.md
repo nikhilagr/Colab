@@ -92,4 +92,4 @@ Flow Navigation (Screen to Screen)
 
 ## Wireframes
 
-<img src="./Wireframe.jpg" width=600>
+<img src="./Wireframe.JPG" width=600>
