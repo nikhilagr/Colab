@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7427D800B94FDEA5B7132517 /* Pods_Colab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274D9BF6E8562A2D3E6FB95D /* Pods_Colab.framework */; };
 		F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD8F22592E6200199647 /* AppDelegate.swift */; };
 		F8B7BD9222592E6200199647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD9122592E6200199647 /* ViewController.swift */; };
 		F8B7BD9522592E6200199647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9322592E6200199647 /* Main.storyboard */; };
 		F8B7BD9722592E6300199647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9622592E6300199647 /* Assets.xcassets */; };
 		F8B7BD9A22592E6300199647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9822592E6300199647 /* LaunchScreen.storyboard */; };
+		F8DC289322593CB000B4FC70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		274D9BF6E8562A2D3E6FB95D /* Pods_Colab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DD2BFC137B5BD659A13978C /* Pods-Colab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colab.release.xcconfig"; path = "Pods/Target Support Files/Pods-Colab/Pods-Colab.release.xcconfig"; sourceTree = "<group>"; };
+		7A5AC1E42B940D139F90DC23 /* Pods-Colab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Colab/Pods-Colab.debug.xcconfig"; sourceTree = "<group>"; };
 		F8B7BD8C22592E6200199647 /* Colab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B7BD8F22592E6200199647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B7BD9122592E6200199647 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		F8B7BD9622592E6300199647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8B7BD9922592E6300199647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8B7BD9B22592E6300199647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7427D800B94FDEA5B7132517 /* Pods_Colab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7137FD344DDEDB69562C25A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A5AC1E42B940D139F90DC23 /* Pods-Colab.debug.xcconfig */,
+				6DD2BFC137B5BD659A13978C /* Pods-Colab.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE85ABEDDA6FB968738B30C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				274D9BF6E8562A2D3E6FB95D /* Pods_Colab.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8B7BD8322592E6200199647 = {
 			isa = PBXGroup;
 			children = (
 				F8B7BD8E22592E6200199647 /* Colab */,
 				F8B7BD8D22592E6200199647 /* Products */,
+				7137FD344DDEDB69562C25A7 /* Pods */,
+				BE85ABEDDA6FB968738B30C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +85,7 @@
 				F8B7BD9322592E6200199647 /* Main.storyboard */,
 				F8B7BD9622592E6300199647 /* Assets.xcassets */,
 				F8B7BD9822592E6300199647 /* LaunchScreen.storyboard */,
+				F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */,
 				F8B7BD9B22592E6300199647 /* Info.plist */,
 			);
 			path = Colab;
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8B7BD9E22592E6300199647 /* Build configuration list for PBXNativeTarget "Colab" */;
 			buildPhases = (
+				AF3CBCB2D46C1A2A49E766BC /* [CP] Check Pods Manifest.lock */,
 				F8B7BD8822592E6200199647 /* Sources */,
 				F8B7BD8922592E6200199647 /* Frameworks */,
 				F8B7BD8A22592E6200199647 /* Resources */,
+				A3B84AAE13F8DF66A95A4F7A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,12 +152,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B7BD9A22592E6300199647 /* LaunchScreen.storyboard in Resources */,
+				F8DC289322593CB000B4FC70 /* GoogleService-Info.plist in Resources */,
 				F8B7BD9722592E6300199647 /* Assets.xcassets in Resources */,
 				F8B7BD9522592E6200199647 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3B84AAE13F8DF66A95A4F7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Colab/Pods-Colab-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Colab/Pods-Colab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF3CBCB2D46C1A2A49E766BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Colab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8B7BD8822592E6200199647 /* Sources */ = {
@@ -280,6 +359,7 @@
 		};
 		F8B7BD9F22592E6300199647 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A5AC1E42B940D139F90DC23 /* Pods-Colab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +378,7 @@
 		};
 		F8B7BDA022592E6300199647 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DD2BFC137B5BD659A13978C /* Pods-Colab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

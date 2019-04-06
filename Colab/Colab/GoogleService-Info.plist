@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>542751107238-lsklrnba4j4b559mqsas0opi19lrl3vv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.542751107238-lsklrnba4j4b559mqsas0opi19lrl3vv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBID6s4WR4CH7EpMC5npciLRVSelkjEpRs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>542751107238</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nikhil.Colab</string>
+	<key>PROJECT_ID</key>
+	<string>worktrack-1dbae</string>
+	<key>STORAGE_BUCKET</key>
+	<string>worktrack-1dbae.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:542751107238:ios:8ae7f0691c4922bd</string>
+	<key>DATABASE_URL</key>
+	<string>https://worktrack-1dbae.firebaseio.com</string>
+</dict>
+</plist>
