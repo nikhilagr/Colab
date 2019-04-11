@@ -177,10 +177,18 @@ Flow Navigation (Screen to Screen)
       - (Update/PUT) Update an existing todo
    
    - Notes Screen
-      - (Create/POST) Create a new checklist item (todo)
-      - (Read/GET) Query all checklist items(todo)
-      - (Delete) Delete existing note
+      - (Create/POST) Create a new note for an user 
+      - (Read/GET) Query all notes created by the user
+      - (Delete) Delete an existing note
       - (Update/PUT) Update an existing note 
+      
+   - Reminder Screen
+      - (Create/POST) Create a new reminder for an event
+      - (Read/GET) Query all existing reminders for an user
+      - (Delete) Delete existing reminder
+      - (Update/PUT) Update an existing reminder
+     
+     
    
    
 
