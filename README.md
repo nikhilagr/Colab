@@ -135,6 +135,52 @@ Flow Navigation (Screen to Screen)
    | user_auth_id  |  String | unique id associated with all authenticated user |
    | title         |  String | Checklist title |
    | status        |  String | Whether the task is completed or not.  |
+
+### Networking
+#### List of network requests by screen
+   - Todo Screen 
+      - (Create/POST) Create a new checklist item (todo) 
+        ```swift
+        Firestore.firestore().collection(CHECKLIST_REF).addDocument(data: [STATUS : "incomplete",
+            TITLE: todoDesc, USER_ID: "tq3fiRpP3YgFZWDWhIdMKxrIbit1"]) { (err) in
+        if let err = err{
+            print(todoDesc)
+            print("Unable to publish")
+            debugPrint("Error adding \(err)")
+        }
+        else{
+                print("Document added")
+        }
+        
+      - (Read/GET) Query all checklist items(todo) 
+         ```swift
+                 checklistCollectionRef.getDocuments { (snapshot, err) in
+            if let err = err{
+                debugPrint("Error fetching documents\(err)")
+            }else{
+                guard let snap = snapshot else {return}
+                for document in snap.documents{
+                        let data = document.data()
+                        let checklist_id = data["checklist_id"] as? String ?? ""
+                        let status = data["status"] as? String ?? "incomplete"
+                        let title = data["title"] as? String ?? "Title"
+                    
+                    let newTodo = Checklist(checklist_id: checklist_id, status: status, title: title)
+                    self.todos.append(newTodo)
+                    
+                }
+                self.tableView.reloadData()
+            }
+        }
+         ```
+      - (Delete) Delete existing todo
+      - (Update/PUT) Update an existing todo
+   
+   - Notes Screen
+      - (Create/POST) Create a new checklist item (todo)
+      - (Read/GET) Query all checklist items(todo)
+      - (Delete) Delete existing note
+      - (Update/PUT) Update an existing note 
    
    
 
