@@ -93,3 +93,51 @@ Flow Navigation (Screen to Screen)
 ## Wireframes
 
 <img src="./Wireframe.JPG" width=600>
+
+## Schema 
+### Models
+#### User
+
+   | Property     | Type     | Description |
+   | ------------ | --------  | ------------|
+   | user_id      |  String  | unique id for each registered user (default field) |
+   | email        |  String  | Email used for registration |
+   | first_name   |  String  | First name of the user |
+   | last_name    |  String  | last name of the user |
+   | dob          | DateTime | Date of birth of the user |
+   | user_auth_id | String   | authentication id received from firestore |
+   
+#### Notes
+
+   | Property      | Type    | Description |
+   | ------------- | ------- | ------------|
+   | note_id       |  String  | unique id for each note created |
+   | user_auth_id  |  String | unique id associated with all authenticated user |
+   | note_title    |  String | Title for the note |
+   | note_desc     |  String | Detailed description for the note |
+
+#### Reminder
+
+   | Property      | Type    | Description |
+   | ------------- | ------- | ------------|
+   | reminder_id   |  String | unique id for each reminder created |
+   | user_auth_id  |  String | unique id associated with all authenticated user |
+   | title         |  String | Title for the remainder |
+   | desc          |  String | Detailed description of the event for which remainder is created |
+   | date          |  String | Date for notifying the user about the event |
+   | time          |  String | Time when the user should be notified |
+   
+#### Checklist
+
+   | Property      | Type    | Description |
+   | ------------- | ------- | ------------|
+   | checklist_id  |  String | unique id for each checklist item created |
+   | user_auth_id  |  String | unique id associated with all authenticated user |
+   | title         |  String | Checklist title |
+   | status        |  String | Whether the task is completed or not.  |
+   
+   
+
+   
+   
+   
