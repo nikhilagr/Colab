@@ -187,6 +187,10 @@ Flow Navigation (Screen to Screen)
       - (Read/GET) Query all existing reminders for an user
       - (Delete) Delete existing reminder
       - (Update/PUT) Update an existing reminder
+      
+   - Settings Screen
+      - (Read/GET) Get the existing profile information and app settings.
+      - (Update/PUT) Update the user information and the app settings.
      
      
    
