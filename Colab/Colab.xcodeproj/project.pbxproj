@@ -13,11 +13,12 @@
 		C19E5FC22260215000EEE918 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FC12260215000EEE918 /* Reminder.swift */; };
 		C19E5FC42260221500EEE918 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FC32260221500EEE918 /* User.swift */; };
 		F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD8F22592E6200199647 /* AppDelegate.swift */; };
-		F8B7BD9222592E6200199647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD9122592E6200199647 /* ViewController.swift */; };
+		F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD9122592E6200199647 /* LoginViewController.swift */; };
 		F8B7BD9522592E6200199647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9322592E6200199647 /* Main.storyboard */; };
 		F8B7BD9722592E6300199647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9622592E6300199647 /* Assets.xcassets */; };
 		F8B7BD9A22592E6300199647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9822592E6300199647 /* LaunchScreen.storyboard */; };
 		F8DC289322593CB000B4FC70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */; };
+		F8DC5BB9226068B4004133C8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC5BB8226068B4004133C8 /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +31,13 @@
 		C19E5FC32260221500EEE918 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F8B7BD8C22592E6200199647 /* Colab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B7BD8F22592E6200199647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8B7BD9122592E6200199647 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8B7BD9122592E6200199647 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F8B7BD9422592E6200199647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8B7BD9622592E6300199647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8B7BD9922592E6300199647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8B7BD9B22592E6300199647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8DC5BB8226068B4004133C8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F874A4CA22613072004524B4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8DC5BB8226068B4004133C8 /* RegistrationViewController.swift */,
+				F8B7BD9122592E6200199647 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		F8B7BD8322592E6200199647 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +110,9 @@
 		F8B7BD8E22592E6200199647 /* Colab */ = {
 			isa = PBXGroup;
 			children = (
+				F874A4CA22613072004524B4 /* ViewControllers */,
 				C19E5FBC22601DE600EEE918 /* Model */,
 				F8B7BD8F22592E6200199647 /* AppDelegate.swift */,
-				F8B7BD9122592E6200199647 /* ViewController.swift */,
 				F8B7BD9322592E6200199647 /* Main.storyboard */,
 				F8B7BD9622592E6300199647 /* Assets.xcassets */,
 				F8B7BD9822592E6300199647 /* LaunchScreen.storyboard */,
@@ -246,10 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B7BD9222592E6200199647 /* ViewController.swift in Sources */,
+				F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */,
 				F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */,
 				C19E5FC42260221500EEE918 /* User.swift in Sources */,
 				C19E5FBE22601EE900EEE918 /* Checklist.swift in Sources */,
+				F8DC5BB9226068B4004133C8 /* RegistrationViewController.swift in Sources */,
 				C19E5FC02260203700EEE918 /* Note.swift in Sources */,
 				C19E5FC22260215000EEE918 /* Reminder.swift in Sources */,
 			);
