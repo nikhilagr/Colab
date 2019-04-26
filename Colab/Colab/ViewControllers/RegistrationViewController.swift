@@ -100,12 +100,7 @@ class RegistrationViewController: UIViewController {
                         
                     }else{
                         
-                        // Show alert to check verification email.
-                        print("please check verification email")
-                        let alert = UIAlertController(title: "Registeration completed successfully", message: "Please check verification email in inbox", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil) )
-                        self.present(alert, animated: true,completion:nil)
-                        
+
                 
                         let db = Firestore.firestore()
                         let ref = db.collection("users").document()
@@ -116,13 +111,24 @@ class RegistrationViewController: UIViewController {
                             if let err = error{
                                 debugPrint(err.localizedDescription)
                             }else{
+                                // Show alert to check verification email.
+                                print("please check verification email")
+                                let alert = UIAlertController(title: "Registeration completed successfully", message: "Please check verification email in inbox", preferredStyle: .alert)
+                                let action = UIAlertAction(title: "OK", style: .default , handler: { (UIAlertAction) in
+                                    self.dismiss(animated: true, completion: nil)
+                                })
+                                alert.addAction(action)
+                                self.present(alert, animated: true, completion: {
+                                    })
+                                
+                                
                                 print("successfully added user to db")
                             }
                         })
                     }
                 })
                 print("Success")
-                self.dismiss(animated: true, completion: nil)
+               // self.dismiss(animated: true, completion: nil)
             }
             
         }
