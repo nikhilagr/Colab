@@ -12,6 +12,13 @@
 		C19E5FC02260203700EEE918 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FBF2260203700EEE918 /* Note.swift */; };
 		C19E5FC22260215000EEE918 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FC12260215000EEE918 /* Reminder.swift */; };
 		C19E5FC42260221500EEE918 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FC32260221500EEE918 /* User.swift */; };
+		C1A87BEC2272F137005468BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BEB2272F137005468BB /* Constants.swift */; };
+		C1A87BEE2272F28C005468BB /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BED2272F28C005468BB /* TodoViewController.swift */; };
+		C1A87BF02272F2A2005468BB /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BEF2272F2A2005468BB /* NotesViewController.swift */; };
+		C1A87BF22272F2BC005468BB /* RemainderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF12272F2BC005468BB /* RemainderViewController.swift */; };
+		C1A87BF42272F2D0005468BB /* ColabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF32272F2D0005468BB /* ColabViewController.swift */; };
+		C1A87BF62272F2E6005468BB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF52272F2E6005468BB /* SettingsViewController.swift */; };
+		C1A87BF92272F3AB005468BB /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF82272F3AB005468BB /* TodoCell.swift */; };
 		F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD8F22592E6200199647 /* AppDelegate.swift */; };
 		F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD9122592E6200199647 /* LoginViewController.swift */; };
 		F8B7BD9522592E6200199647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9322592E6200199647 /* Main.storyboard */; };
@@ -29,6 +36,13 @@
 		C19E5FBF2260203700EEE918 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C19E5FC12260215000EEE918 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		C19E5FC32260221500EEE918 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C1A87BEB2272F137005468BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C1A87BED2272F28C005468BB /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		C1A87BEF2272F2A2005468BB /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		C1A87BF12272F2BC005468BB /* RemainderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainderViewController.swift; sourceTree = "<group>"; };
+		C1A87BF32272F2D0005468BB /* ColabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabViewController.swift; sourceTree = "<group>"; };
+		C1A87BF52272F2E6005468BB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C1A87BF82272F3AB005468BB /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 		F8B7BD8C22592E6200199647 /* Colab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B7BD8F22592E6200199647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B7BD9122592E6200199647 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -80,11 +94,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C1A87BEA2272F120005468BB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C1A87BEB2272F137005468BB /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C1A87BF72272F2EE005468BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1A87BF82272F3AB005468BB /* TodoCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F874A4CA22613072004524B4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				F8DC5BB8226068B4004133C8 /* RegistrationViewController.swift */,
 				F8B7BD9122592E6200199647 /* LoginViewController.swift */,
+				C1A87BED2272F28C005468BB /* TodoViewController.swift */,
+				C1A87BEF2272F2A2005468BB /* NotesViewController.swift */,
+				C1A87BF12272F2BC005468BB /* RemainderViewController.swift */,
+				C1A87BF32272F2D0005468BB /* ColabViewController.swift */,
+				C1A87BF52272F2E6005468BB /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -110,6 +145,8 @@
 		F8B7BD8E22592E6200199647 /* Colab */ = {
 			isa = PBXGroup;
 			children = (
+				C1A87BF72272F2EE005468BB /* View */,
+				C1A87BEA2272F120005468BB /* Utilities */,
 				F874A4CA22613072004524B4 /* ViewControllers */,
 				C19E5FBC22601DE600EEE918 /* Model */,
 				F8B7BD8F22592E6200199647 /* AppDelegate.swift */,
@@ -257,13 +294,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A87BF42272F2D0005468BB /* ColabViewController.swift in Sources */,
 				F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */,
+				C1A87BEE2272F28C005468BB /* TodoViewController.swift in Sources */,
 				F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */,
+				C1A87BF22272F2BC005468BB /* RemainderViewController.swift in Sources */,
 				C19E5FC42260221500EEE918 /* User.swift in Sources */,
 				C19E5FBE22601EE900EEE918 /* Checklist.swift in Sources */,
 				F8DC5BB9226068B4004133C8 /* RegistrationViewController.swift in Sources */,
+				C1A87BF02272F2A2005468BB /* NotesViewController.swift in Sources */,
+				C1A87BF92272F3AB005468BB /* TodoCell.swift in Sources */,
 				C19E5FC02260203700EEE918 /* Note.swift in Sources */,
+				C1A87BF62272F2E6005468BB /* SettingsViewController.swift in Sources */,
 				C19E5FC22260215000EEE918 /* Reminder.swift in Sources */,
+				C1A87BEC2272F137005468BB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

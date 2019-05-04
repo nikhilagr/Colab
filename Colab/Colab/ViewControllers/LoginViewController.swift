@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
                     
                     if((user?.isEmailVerified)!){
                         //Login to HOME controller
+                        self.performSegue(withIdentifier: "loginSucess", sender: self)
                         print("I am at HOME Controller")
                     }else{
                         
@@ -72,8 +73,6 @@ class LoginViewController: UIViewController {
 
         
     } // end of onTapLogin
-    
-    
     
             
 }
