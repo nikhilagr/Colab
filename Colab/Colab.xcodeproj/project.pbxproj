@@ -22,10 +22,10 @@
 		F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD8F22592E6200199647 /* AppDelegate.swift */; };
 		F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD9122592E6200199647 /* LoginViewController.swift */; };
 		F8B7BD9522592E6200199647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9322592E6200199647 /* Main.storyboard */; };
-		F8B7BD9722592E6300199647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9622592E6300199647 /* Assets.xcassets */; };
 		F8B7BD9A22592E6300199647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9822592E6300199647 /* LaunchScreen.storyboard */; };
 		F8DC289322593CB000B4FC70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */; };
 		F8DC5BB9226068B4004133C8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC5BB8226068B4004133C8 /* RegistrationViewController.swift */; };
+		F8F5710F227D341E005C08F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F5710E227D341E005C08F6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,11 +47,11 @@
 		F8B7BD8F22592E6200199647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B7BD9122592E6200199647 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F8B7BD9422592E6200199647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F8B7BD9622592E6300199647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8B7BD9922592E6300199647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8B7BD9B22592E6300199647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8DC5BB8226068B4004133C8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		F8F5710E227D341E005C08F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,13 +145,13 @@
 		F8B7BD8E22592E6200199647 /* Colab */ = {
 			isa = PBXGroup;
 			children = (
+				F8F5710E227D341E005C08F6 /* Assets.xcassets */,
 				C1A87BF72272F2EE005468BB /* View */,
 				C1A87BEA2272F120005468BB /* Utilities */,
 				F874A4CA22613072004524B4 /* ViewControllers */,
 				C19E5FBC22601DE600EEE918 /* Model */,
 				F8B7BD8F22592E6200199647 /* AppDelegate.swift */,
 				F8B7BD9322592E6200199647 /* Main.storyboard */,
-				F8B7BD9622592E6300199647 /* Assets.xcassets */,
 				F8B7BD9822592E6300199647 /* LaunchScreen.storyboard */,
 				F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */,
 				F8B7BD9B22592E6300199647 /* Info.plist */,
@@ -221,7 +221,7 @@
 			files = (
 				F8B7BD9A22592E6300199647 /* LaunchScreen.storyboard in Resources */,
 				F8DC289322593CB000B4FC70 /* GoogleService-Info.plist in Resources */,
-				F8B7BD9722592E6300199647 /* Assets.xcassets in Resources */,
+				F8F5710F227D341E005C08F6 /* Assets.xcassets in Resources */,
 				F8B7BD9522592E6200199647 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
