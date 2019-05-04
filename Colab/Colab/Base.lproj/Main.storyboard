@@ -210,11 +210,15 @@
         <scene sceneID="cqb-hJ-bCo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WAF-te-rDE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Reminder" id="yrn-M2-TcF"/>
+                    <tabBarItem key="tabBarItem" title="Reminder" image="icons8-alarm-24" id="yrn-M2-TcF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MDu-LK-tOo">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -229,11 +233,15 @@
         <scene sceneID="d93-Fa-5EN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2HV-7I-7rn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="qLF-QH-joA"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-admin-settings-male-24" id="qLF-QH-joA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0w5-Ph-9Fl">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -248,11 +256,15 @@
         <scene sceneID="Pp7-3n-pbt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Svc-6C-UFc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Todos" id="zIL-XU-efM"/>
+                    <tabBarItem key="tabBarItem" title="Todos" image="icons8-checklist-24" id="zIL-XU-efM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uK1-7l-BXS">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -299,11 +311,15 @@
         <scene sceneID="D7w-mH-fPA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SBG-12-cFz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Colab" id="jcK-AW-OkK"/>
+                    <tabBarItem key="tabBarItem" title="Colab" image="icons8-queue-filled-30" id="jcK-AW-OkK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BiC-Ut-QZo">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -334,11 +350,15 @@
         <scene sceneID="XiA-rr-owQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6LK-Eh-Snl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notes" id="WaM-b9-JRv"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="icons8-task-24" id="WaM-b9-JRv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DrR-AA-UsA">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -470,4 +490,11 @@
             <point key="canvasLocation" x="2345" y="2480"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-admin-settings-male-24" width="24" height="24"/>
+        <image name="icons8-alarm-24" width="24" height="24"/>
+        <image name="icons8-checklist-24" width="24" height="24"/>
+        <image name="icons8-queue-filled-30" width="30" height="30"/>
+        <image name="icons8-task-24" width="24" height="24"/>
+    </resources>
 </document>
