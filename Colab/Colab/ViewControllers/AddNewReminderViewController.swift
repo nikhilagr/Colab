@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class AddNewReminderViewController: UIViewController {
 
@@ -16,7 +18,7 @@ class AddNewReminderViewController: UIViewController {
     @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     
-    
+    let currentUserId: String = Auth.auth().currentUser?.uid ?? " "
     var reminder: Reminder? = nil
     
     override func viewDidLoad() {
@@ -44,6 +46,58 @@ class AddNewReminderViewController: UIViewController {
                 
             }
     }
+    
+    @IBAction func addNewReminderAction(_ sender: UIButton) {
+        
+        insertReminderInFirestoreDB(userId: currentUserId)
+    }
+    
+    @IBAction func saveReminderAction(_ sender: UIButton) {
+        updateReminderInFireStoreDB(reminderID: reminder?.reminder_id ?? " ")
+    }
+    
+    
+    func insertReminderInFirestoreDB(userId : String){
+        
+        let docRef = Firestore.firestore().collection(REMINDER_DB).document()
+        
+        let reminder_id = docRef.documentID
+        let reminder_title = titleTF.text ?? ""
+        let reminder_desc = " "
+        let reminder_time = timeTF.text ?? " "
+        let reminder_date = dateTF.text ?? " "
+        
+        let reminder = Reminder(reminderId: reminder_id, userId: currentUserId, remDesc: reminder_desc, remTitle: reminder_title, remTime: reminder_time, remDate: reminder_date)
+        
+        docRef.setData(reminder.dictionary) { (error) in
+            
+            if error == nil{
+                print("Reminder \(self.titleTF.text) inserted successfully")
+                
+            }else{
+                print("Error in inserting reminder:\(error?.localizedDescription as Any)")
+            }
+        }
+    }
+    
+    func updateReminderInFireStoreDB(reminderID: String){
+        
+        let docRef = Firestore.firestore().collection(REMINDER_DB).document(reminderID)
+                
+        docRef.updateData( ["title":titleTF.text,
+                            "time": timeTF.text,
+                            "date": dateTF.text]) { (error) in
+                                if error == nil {
+                                    
+                                    print("Successfully updated reminder")
+                                    
+                                }else{
+                                    print("Failed to update reminder!!")
+                                }
+        }
+        
+    }
+    
 
 
 
