@@ -11,6 +11,7 @@ import UIKit
 class TodoCell: UITableViewCell {
     
     @IBOutlet weak var todoLabel: UILabel!
+    @IBOutlet weak var checkBox: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +20,27 @@ class TodoCell: UITableViewCell {
     
     func congifure(checklist: Checklist){
         todoLabel.text = checklist.title
+        
+        if checklist.status == "Complete"{
+            checkBox.isSelected = true
+        }
+        
+        if checklist.status == "Incomplete"{
+            checkBox.isSelected = false
+        }
+        
     }
+    
+    @IBAction func onCheckboxTap(_ sender: UIButton) {
+    
+        if sender.isSelected{
+            sender.isSelected = false
+        }else{
+            sender.isSelected = true
+        }
+    }
+    
+    
+    
     
 }

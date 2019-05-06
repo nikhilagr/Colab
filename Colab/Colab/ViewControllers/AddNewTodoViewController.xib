@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewTodoViewController" customModule="Colab" customModuleProvider="target">
+            <connections>
+                <outlet property="todoItemTF" destination="WsX-6N-J48" id="2s5-6f-58K"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDo-4F-BVq">
+                    <rect key="frame" x="32" y="220" width="311" height="233"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Todo Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRP-gi-Gqb">
+                            <rect key="frame" x="32" y="32" width="247" height="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g Buy milk and bread" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WsX-6N-J48">
+                            <rect key="frame" x="24" y="109" width="263" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHP-G0-vvj">
+                            <rect key="frame" x="24" y="86" width="263" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUL-3k-qsW">
+                            <rect key="frame" x="65" y="186" width="84" height="30"/>
+                            <color key="backgroundColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="84" id="AnG-NN-dNM"/>
+                            </constraints>
+                            <state key="normal" title="Cancle">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancleAction:" destination="-1" eventType="touchUpInside" id="3RD-3l-UA3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTB-Hn-XxU">
+                            <rect key="frame" x="175" y="186" width="84" height="30"/>
+                            <color key="backgroundColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Add Item">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="addNewTodoAction:" destination="-1" eventType="touchUpInside" id="V4b-Og-2mv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="XRP-gi-Gqb" firstAttribute="top" secondItem="gDo-4F-BVq" secondAttribute="top" constant="32" id="4dl-HJ-rBp"/>
+                        <constraint firstItem="WsX-6N-J48" firstAttribute="top" secondItem="iHP-G0-vvj" secondAttribute="bottom" constant="8" id="7gZ-Hg-IGs"/>
+                        <constraint firstItem="eUL-3k-qsW" firstAttribute="top" secondItem="WsX-6N-J48" secondAttribute="bottom" constant="47" id="84L-dK-DEb"/>
+                        <constraint firstItem="iHP-G0-vvj" firstAttribute="leading" secondItem="gDo-4F-BVq" secondAttribute="leading" constant="24" id="GJJ-Gc-bWs"/>
+                        <constraint firstAttribute="trailing" secondItem="iHP-G0-vvj" secondAttribute="trailing" constant="24" id="HGn-Yi-Z5B"/>
+                        <constraint firstItem="iHP-G0-vvj" firstAttribute="top" secondItem="XRP-gi-Gqb" secondAttribute="bottom" constant="32" id="KX2-2Y-xP8"/>
+                        <constraint firstAttribute="trailing" secondItem="XRP-gi-Gqb" secondAttribute="trailing" constant="32" id="NKe-uD-GjD"/>
+                        <constraint firstItem="eUL-3k-qsW" firstAttribute="baseline" secondItem="eTB-Hn-XxU" secondAttribute="baseline" id="OxI-TB-d90"/>
+                        <constraint firstItem="WsX-6N-J48" firstAttribute="leading" secondItem="gDo-4F-BVq" secondAttribute="leading" constant="24" id="RwJ-Q9-2s5"/>
+                        <constraint firstItem="XRP-gi-Gqb" firstAttribute="leading" secondItem="gDo-4F-BVq" secondAttribute="leading" constant="32" id="SdQ-SP-jKx"/>
+                        <constraint firstItem="eUL-3k-qsW" firstAttribute="leading" secondItem="gDo-4F-BVq" secondAttribute="leading" constant="65" id="W9Z-HW-8aQ"/>
+                        <constraint firstItem="eTB-Hn-XxU" firstAttribute="leading" secondItem="eUL-3k-qsW" secondAttribute="trailing" constant="26" id="fpI-Zc-1OT"/>
+                        <constraint firstAttribute="trailing" secondItem="WsX-6N-J48" secondAttribute="trailing" constant="24" id="kUc-hT-RRN"/>
+                        <constraint firstAttribute="trailing" secondItem="eTB-Hn-XxU" secondAttribute="trailing" constant="52" id="n9Y-eb-zl8"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gDo-4F-BVq" secondAttribute="trailing" constant="32" id="5G5-Ks-9cA"/>
+                <constraint firstItem="gDo-4F-BVq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="AWI-QC-nXJ"/>
+                <constraint firstItem="gDo-4F-BVq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="L5W-0o-IIC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gDo-4F-BVq" secondAttribute="bottom" constant="214" id="hW4-ra-dg8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

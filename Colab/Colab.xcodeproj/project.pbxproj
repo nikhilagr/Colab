@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7427D800B94FDEA5B7132517 /* Pods_Colab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274D9BF6E8562A2D3E6FB95D /* Pods_Colab.framework */; };
 		C19E5FBE22601EE900EEE918 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FBD22601EE900EEE918 /* Checklist.swift */; };
 		C19E5FC02260203700EEE918 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FBF2260203700EEE918 /* Note.swift */; };
 		C19E5FC22260215000EEE918 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FC12260215000EEE918 /* Reminder.swift */; };
@@ -15,10 +14,18 @@
 		C1A87BEC2272F137005468BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BEB2272F137005468BB /* Constants.swift */; };
 		C1A87BEE2272F28C005468BB /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BED2272F28C005468BB /* TodoViewController.swift */; };
 		C1A87BF02272F2A2005468BB /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BEF2272F2A2005468BB /* NotesViewController.swift */; };
-		C1A87BF22272F2BC005468BB /* RemainderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF12272F2BC005468BB /* RemainderViewController.swift */; };
 		C1A87BF42272F2D0005468BB /* ColabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF32272F2D0005468BB /* ColabViewController.swift */; };
 		C1A87BF62272F2E6005468BB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF52272F2E6005468BB /* SettingsViewController.swift */; };
 		C1A87BF92272F3AB005468BB /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF82272F3AB005468BB /* TodoCell.swift */; };
+		F83FE832227D77C60027905A /* Pods_Colab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274D9BF6E8562A2D3E6FB95D /* Pods_Colab.framework */; };
+		F83FE834227D79290027905A /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE833227D79290027905A /* ReminderViewController.swift */; };
+		F8A0E32F227E4E790084EDC0 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E32E227E4E790084EDC0 /* NotesCell.swift */; };
+		F8A0E331227E4F890084EDC0 /* RemindersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E330227E4F890084EDC0 /* RemindersCell.swift */; };
+		F8A0E333227F50360084EDC0 /* AddNewReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E332227F50360084EDC0 /* AddNewReminderViewController.swift */; };
+		F8A0E337227F591B0084EDC0 /* CustomReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E335227F591B0084EDC0 /* CustomReminderCell.swift */; };
+		F8A0E338227F591B0084EDC0 /* CustomReminderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8A0E336227F591B0084EDC0 /* CustomReminderCell.xib */; };
+		F8A0E33B227F7B160084EDC0 /* AddNewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E339227F7B160084EDC0 /* AddNewTodoViewController.swift */; };
+		F8A0E33C227F7B160084EDC0 /* AddNewTodoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8A0E33A227F7B160084EDC0 /* AddNewTodoViewController.xib */; };
 		F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD8F22592E6200199647 /* AppDelegate.swift */; };
 		F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD9122592E6200199647 /* LoginViewController.swift */; };
 		F8B7BD9522592E6200199647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9322592E6200199647 /* Main.storyboard */; };
@@ -39,10 +46,17 @@
 		C1A87BEB2272F137005468BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C1A87BED2272F28C005468BB /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		C1A87BEF2272F2A2005468BB /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		C1A87BF12272F2BC005468BB /* RemainderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainderViewController.swift; sourceTree = "<group>"; };
 		C1A87BF32272F2D0005468BB /* ColabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabViewController.swift; sourceTree = "<group>"; };
 		C1A87BF52272F2E6005468BB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C1A87BF82272F3AB005468BB /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
+		F83FE833227D79290027905A /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		F8A0E32E227E4E790084EDC0 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		F8A0E330227E4F890084EDC0 /* RemindersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCell.swift; sourceTree = "<group>"; };
+		F8A0E332227F50360084EDC0 /* AddNewReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewReminderViewController.swift; sourceTree = "<group>"; };
+		F8A0E335227F591B0084EDC0 /* CustomReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomReminderCell.swift; sourceTree = "<group>"; };
+		F8A0E336227F591B0084EDC0 /* CustomReminderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomReminderCell.xib; sourceTree = "<group>"; };
+		F8A0E339227F7B160084EDC0 /* AddNewTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTodoViewController.swift; sourceTree = "<group>"; };
+		F8A0E33A227F7B160084EDC0 /* AddNewTodoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewTodoViewController.xib; sourceTree = "<group>"; };
 		F8B7BD8C22592E6200199647 /* Colab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B7BD8F22592E6200199647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B7BD9122592E6200199647 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7427D800B94FDEA5B7132517 /* Pods_Colab.framework in Frameworks */,
+				F83FE832227D77C60027905A /* Pods_Colab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +119,10 @@
 		C1A87BF72272F2EE005468BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F8A0E334227F58B40084EDC0 /* cells */,
 				C1A87BF82272F3AB005468BB /* TodoCell.swift */,
+				F8A0E32E227E4E790084EDC0 /* NotesCell.swift */,
+				F8A0E330227E4F890084EDC0 /* RemindersCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,11 +134,23 @@
 				F8B7BD9122592E6200199647 /* LoginViewController.swift */,
 				C1A87BED2272F28C005468BB /* TodoViewController.swift */,
 				C1A87BEF2272F2A2005468BB /* NotesViewController.swift */,
-				C1A87BF12272F2BC005468BB /* RemainderViewController.swift */,
 				C1A87BF32272F2D0005468BB /* ColabViewController.swift */,
 				C1A87BF52272F2E6005468BB /* SettingsViewController.swift */,
+				F83FE833227D79290027905A /* ReminderViewController.swift */,
+				F8A0E332227F50360084EDC0 /* AddNewReminderViewController.swift */,
+				F8A0E339227F7B160084EDC0 /* AddNewTodoViewController.swift */,
+				F8A0E33A227F7B160084EDC0 /* AddNewTodoViewController.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F8A0E334227F58B40084EDC0 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				F8A0E335227F591B0084EDC0 /* CustomReminderCell.swift */,
+				F8A0E336227F591B0084EDC0 /* CustomReminderCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		F8B7BD8322592E6200199647 = {
@@ -220,6 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B7BD9A22592E6300199647 /* LaunchScreen.storyboard in Resources */,
+				F8A0E33C227F7B160084EDC0 /* AddNewTodoViewController.xib in Resources */,
+				F8A0E338227F591B0084EDC0 /* CustomReminderCell.xib in Resources */,
 				F8DC289322593CB000B4FC70 /* GoogleService-Info.plist in Resources */,
 				F8F5710F227D341E005C08F6 /* Assets.xcassets in Resources */,
 				F8B7BD9522592E6200199647 /* Main.storyboard in Resources */,
@@ -294,18 +325,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8A0E32F227E4E790084EDC0 /* NotesCell.swift in Sources */,
 				C1A87BF42272F2D0005468BB /* ColabViewController.swift in Sources */,
 				F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */,
+				F83FE834227D79290027905A /* ReminderViewController.swift in Sources */,
+				F8A0E337227F591B0084EDC0 /* CustomReminderCell.swift in Sources */,
 				C1A87BEE2272F28C005468BB /* TodoViewController.swift in Sources */,
 				F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */,
-				C1A87BF22272F2BC005468BB /* RemainderViewController.swift in Sources */,
 				C19E5FC42260221500EEE918 /* User.swift in Sources */,
+				F8A0E333227F50360084EDC0 /* AddNewReminderViewController.swift in Sources */,
+				F8A0E331227E4F890084EDC0 /* RemindersCell.swift in Sources */,
 				C19E5FBE22601EE900EEE918 /* Checklist.swift in Sources */,
 				F8DC5BB9226068B4004133C8 /* RegistrationViewController.swift in Sources */,
 				C1A87BF02272F2A2005468BB /* NotesViewController.swift in Sources */,
 				C1A87BF92272F3AB005468BB /* TodoCell.swift in Sources */,
 				C19E5FC02260203700EEE918 /* Note.swift in Sources */,
 				C1A87BF62272F2E6005468BB /* SettingsViewController.swift in Sources */,
+				F8A0E33B227F7B160084EDC0 /* AddNewTodoViewController.swift in Sources */,
 				C19E5FC22260215000EEE918 /* Reminder.swift in Sources */,
 				C1A87BEC2272F137005468BB /* Constants.swift in Sources */,
 			);
