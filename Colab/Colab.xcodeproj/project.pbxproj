@@ -17,6 +17,10 @@
 		C1A87BF42272F2D0005468BB /* ColabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF32272F2D0005468BB /* ColabViewController.swift */; };
 		C1A87BF62272F2E6005468BB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF52272F2E6005468BB /* SettingsViewController.swift */; };
 		C1A87BF92272F3AB005468BB /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A87BF82272F3AB005468BB /* TodoCell.swift */; };
+		C1EDF82922801B9C00E6AFD6 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDF82822801B9C00E6AFD6 /* WalkthroughContentViewController.swift */; };
+		C1EDF82B22801D8000E6AFD6 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDF82A22801D8000E6AFD6 /* WalkthroughPageViewController.swift */; };
+		C1EDF82D2280274600E6AFD6 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDF82C2280274600E6AFD6 /* WalkthroughViewController.swift */; };
+		C1EDF82F22803C2B00E6AFD6 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1EDF82E22803C2B00E6AFD6 /* Onboarding.storyboard */; };
 		F83FE832227D77C60027905A /* Pods_Colab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274D9BF6E8562A2D3E6FB95D /* Pods_Colab.framework */; };
 		F83FE834227D79290027905A /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE833227D79290027905A /* ReminderViewController.swift */; };
 		F8A0E32F227E4E790084EDC0 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E32E227E4E790084EDC0 /* NotesCell.swift */; };
@@ -50,6 +54,10 @@
 		C1A87BF32272F2D0005468BB /* ColabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabViewController.swift; sourceTree = "<group>"; };
 		C1A87BF52272F2E6005468BB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C1A87BF82272F3AB005468BB /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
+		C1EDF82822801B9C00E6AFD6 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		C1EDF82A22801D8000E6AFD6 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		C1EDF82C2280274600E6AFD6 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		C1EDF82E22803C2B00E6AFD6 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		F83FE833227D79290027905A /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		F8A0E32E227E4E790084EDC0 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
 		F8A0E330227E4F890084EDC0 /* RemindersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCell.swift; sourceTree = "<group>"; };
@@ -142,6 +150,9 @@
 				F8A0E332227F50360084EDC0 /* AddNewReminderViewController.swift */,
 				F8A0E339227F7B160084EDC0 /* AddNewTodoViewController.swift */,
 				F8A0E33A227F7B160084EDC0 /* AddNewTodoViewController.xib */,
+				C1EDF82822801B9C00E6AFD6 /* WalkthroughContentViewController.swift */,
+				C1EDF82A22801D8000E6AFD6 /* WalkthroughPageViewController.swift */,
+				C1EDF82C2280274600E6AFD6 /* WalkthroughViewController.swift */,
 				F8A7A21E22800D7F003DC701 /* AddNewNoteViewController.swift */,
 			);
 			path = ViewControllers;
@@ -187,6 +198,7 @@
 				F8B7BD9822592E6300199647 /* LaunchScreen.storyboard */,
 				F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */,
 				F8B7BD9B22592E6300199647 /* Info.plist */,
+				C1EDF82E22803C2B00E6AFD6 /* Onboarding.storyboard */,
 			);
 			path = Colab;
 			sourceTree = "<group>";
@@ -255,6 +267,7 @@
 				F8A0E33C227F7B160084EDC0 /* AddNewTodoViewController.xib in Resources */,
 				F8A0E338227F591B0084EDC0 /* CustomReminderCell.xib in Resources */,
 				F8DC289322593CB000B4FC70 /* GoogleService-Info.plist in Resources */,
+				C1EDF82F22803C2B00E6AFD6 /* Onboarding.storyboard in Resources */,
 				F8F5710F227D341E005C08F6 /* Assets.xcassets in Resources */,
 				F8B7BD9522592E6200199647 /* Main.storyboard in Resources */,
 			);
@@ -331,8 +344,10 @@
 				F8A0E32F227E4E790084EDC0 /* NotesCell.swift in Sources */,
 				C1A87BF42272F2D0005468BB /* ColabViewController.swift in Sources */,
 				F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */,
+				C1EDF82922801B9C00E6AFD6 /* WalkthroughContentViewController.swift in Sources */,
 				F83FE834227D79290027905A /* ReminderViewController.swift in Sources */,
 				F8A0E337227F591B0084EDC0 /* CustomReminderCell.swift in Sources */,
+				C1EDF82B22801D8000E6AFD6 /* WalkthroughPageViewController.swift in Sources */,
 				C1A87BEE2272F28C005468BB /* TodoViewController.swift in Sources */,
 				F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */,
 				C19E5FC42260221500EEE918 /* User.swift in Sources */,
@@ -348,6 +363,7 @@
 				F8A7A21F22800D7F003DC701 /* AddNewNoteViewController.swift in Sources */,
 				C19E5FC22260215000EEE918 /* Reminder.swift in Sources */,
 				C1A87BEC2272F137005468BB /* Constants.swift in Sources */,
+				C1EDF82D2280274600E6AFD6 /* WalkthroughViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,15 +22,19 @@ class LoginViewController: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        
+    
         if UserDefaults.standard.bool(forKey: "userloggedIn") == true {
             self.performSegue(withIdentifier: "loginSucess", sender: self)
         }
+
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
     
     @IBAction func onLoginTap(_ sender: Any) {
         
