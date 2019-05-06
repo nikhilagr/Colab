@@ -32,8 +32,6 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
        
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return reminders.count;
@@ -59,7 +57,25 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
             self.navigationController?.pushViewController(newReminderVC, animated: true)
         }
         
+    
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+            return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            
+            // handle delete (by removing the data from your array and updating the tableview)
+            deleteReminderFromFirestoreDB(reminderId: reminders[indexPath.row].reminder_id)
+            reminders.remove(at: indexPath.row)
+            tableView.reloadData()
+            print( "Deleted \(indexPath.row)")
+        }
+        
+    }
+    
     
     func readRemindersFromFirestore(userID: String){
         
@@ -87,10 +103,21 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 debugPrint(error?.localizedDescription as Any)
             }
         }
-        
-        
-        
     }
+    
+    func deleteReminderFromFirestoreDB(reminderId: String){
+        
+        let docRef = Firestore.firestore().collection(REMINDER_DB).document(reminderId)
+        
+        docRef.delete { (error) in
+            if error == nil {
+                print("Successfully deleted reminder \(reminderId)")
+            }else{
+                print(error?.localizedDescription as Any)
+            }
+        }
+    }
+    
     
     @IBAction func addNewReminderAction(_ sender: Any) {
         
@@ -99,9 +126,7 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
             
             self.navigationController?.pushViewController(newReminderVC, animated: true)
         }
-        
-        
-        
     }
+    
     
 }

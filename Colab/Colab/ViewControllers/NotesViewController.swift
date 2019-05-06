@@ -130,8 +130,6 @@ class NotesViewController: UIViewController,UITableViewDataSource,UITableViewDel
         }
     }
     
-    
-
 }
 
 

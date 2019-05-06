@@ -463,49 +463,88 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rM0-NL-Q8C">
-                                <rect key="frame" x="20" y="83" width="361" height="30"/>
+                                <rect key="frame" x="24" y="45" width="366" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Tc-MR-ima">
-                                <rect key="frame" x="20" y="133" width="361" height="30"/>
+                                <rect key="frame" x="24" y="128" width="366" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQV-R4-upV">
-                                <rect key="frame" x="20" y="195" width="361" height="30"/>
+                                <rect key="frame" x="24" y="211" width="366" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24Y-Ew-zDH">
-                                <rect key="frame" x="152" y="303" width="97" height="30"/>
-                                <state key="normal" title="Add Reminder"/>
+                                <rect key="frame" x="148" y="389" width="118" height="30"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Reminder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewReminderAction:" destination="YLo-Dw-huN" eventType="touchUpInside" id="PGk-lX-kfc"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAh-gm-5qU">
+                                <rect key="frame" x="24" y="24" width="366" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdl-bb-e0r">
+                                <rect key="frame" x="24" y="107" width="366" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWX-xa-EcB">
+                                <rect key="frame" x="24" y="190" width="366" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw9-hd-8st">
-                                <rect key="frame" x="152" y="303" width="103" height="30"/>
-                                <state key="normal" title="Save Reminder"/>
+                                <rect key="frame" x="148" y="389" width="118" height="30"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save Reminder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveReminderAction:" destination="YLo-Dw-huN" eventType="touchUpInside" id="RlP-ZA-veg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="24Y-Ew-zDH" firstAttribute="top" secondItem="GQV-R4-upV" secondAttribute="bottom" constant="78" id="18B-Q5-HTQ"/>
-                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="vw9-hd-8st" secondAttribute="trailing" constant="159" id="4Vi-0x-2jZ"/>
-                            <constraint firstItem="vw9-hd-8st" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="152" id="9Fi-YY-1EZ"/>
-                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="rM0-NL-Q8C" secondAttribute="trailing" constant="33" id="Cc3-SC-UJ4"/>
-                            <constraint firstItem="rM0-NL-Q8C" firstAttribute="top" secondItem="cYd-RI-ipk" secondAttribute="top" constant="83" id="D3B-Tu-RpS"/>
-                            <constraint firstItem="8Tc-MR-ima" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="20" id="Z88-Vh-bXL"/>
-                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="GQV-R4-upV" secondAttribute="trailing" constant="33" id="cYv-MU-rec"/>
-                            <constraint firstItem="24Y-Ew-zDH" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="152" id="kDt-tA-9Hc"/>
-                            <constraint firstItem="GQV-R4-upV" firstAttribute="top" secondItem="8Tc-MR-ima" secondAttribute="bottom" constant="32" id="mr0-OJ-mUe"/>
-                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="8Tc-MR-ima" secondAttribute="trailing" constant="33" id="nRq-B3-m0E"/>
-                            <constraint firstItem="vw9-hd-8st" firstAttribute="top" secondItem="GQV-R4-upV" secondAttribute="bottom" constant="78" id="onL-sD-qu5"/>
-                            <constraint firstItem="GQV-R4-upV" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="20" id="s7F-5m-faw"/>
-                            <constraint firstItem="8Tc-MR-ima" firstAttribute="top" secondItem="rM0-NL-Q8C" secondAttribute="bottom" constant="20" id="sOa-vB-9b1"/>
-                            <constraint firstItem="rM0-NL-Q8C" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="20" id="wF4-ul-uhg"/>
-                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="24Y-Ew-zDH" secondAttribute="trailing" constant="165" id="xkg-Am-RE3"/>
+                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="zAh-gm-5qU" secondAttribute="trailing" constant="24" id="0v5-Ie-bFV"/>
+                            <constraint firstItem="rM0-NL-Q8C" firstAttribute="top" secondItem="zAh-gm-5qU" secondAttribute="bottom" constant="4" id="DTh-ZZ-hPF"/>
+                            <constraint firstItem="rM0-NL-Q8C" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="24" id="Gia-8C-ecK"/>
+                            <constraint firstItem="GQV-R4-upV" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="24" id="GmL-X5-4x7"/>
+                            <constraint firstItem="8Tc-MR-ima" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="24" id="MAc-K9-den"/>
+                            <constraint firstItem="8Tc-MR-ima" firstAttribute="top" secondItem="Sdl-bb-e0r" secondAttribute="bottom" constant="4" id="Nc4-Pd-XbR"/>
+                            <constraint firstItem="zAh-gm-5qU" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="24" id="QVt-Nf-HPm"/>
+                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="fWX-xa-EcB" secondAttribute="trailing" constant="24" id="SB5-PF-aac"/>
+                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="rM0-NL-Q8C" secondAttribute="trailing" constant="24" id="UVv-lM-Tgt"/>
+                            <constraint firstItem="24Y-Ew-zDH" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="148" id="WEJ-VJ-BaA"/>
+                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="GQV-R4-upV" secondAttribute="trailing" constant="24" id="aDN-BE-d75"/>
+                            <constraint firstItem="zAh-gm-5qU" firstAttribute="top" secondItem="cYd-RI-ipk" secondAttribute="top" constant="24" id="aqg-kR-pee"/>
+                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="vw9-hd-8st" secondAttribute="trailing" constant="148" id="b6m-qr-Vab"/>
+                            <constraint firstItem="fWX-xa-EcB" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="24" id="gzU-aJ-4tF"/>
+                            <constraint firstItem="Sdl-bb-e0r" firstAttribute="top" secondItem="rM0-NL-Q8C" secondAttribute="bottom" constant="32" id="hsL-dy-zmO"/>
+                            <constraint firstItem="vw9-hd-8st" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="148" id="jl4-zw-vHn"/>
+                            <constraint firstItem="Sdl-bb-e0r" firstAttribute="leading" secondItem="cYd-RI-ipk" secondAttribute="leading" constant="24" id="kGx-lX-3Hp"/>
+                            <constraint firstItem="GQV-R4-upV" firstAttribute="top" secondItem="fWX-xa-EcB" secondAttribute="bottom" constant="4" id="kfV-es-Hru"/>
+                            <constraint firstItem="24Y-Ew-zDH" firstAttribute="top" secondItem="GQV-R4-upV" secondAttribute="bottom" constant="148" id="rTv-5e-MKF"/>
+                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="Sdl-bb-e0r" secondAttribute="trailing" constant="24" id="sgJ-8c-n7R"/>
+                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="8Tc-MR-ima" secondAttribute="trailing" constant="24" id="sjp-u5-aNa"/>
+                            <constraint firstItem="fWX-xa-EcB" firstAttribute="top" secondItem="8Tc-MR-ima" secondAttribute="bottom" constant="32" id="wPq-q0-nl1"/>
+                            <constraint firstItem="cYd-RI-ipk" firstAttribute="trailing" secondItem="24Y-Ew-zDH" secondAttribute="trailing" constant="148" id="y79-1b-YFG"/>
+                            <constraint firstItem="vw9-hd-8st" firstAttribute="top" secondItem="GQV-R4-upV" secondAttribute="bottom" constant="148" id="z9b-uA-mw1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cYd-RI-ipk"/>
                     </view>
@@ -520,7 +559,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1X2-cQ-Nkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="3217"/>
+            <point key="canvasLocation" x="1453.6231884057972" y="3216.9642857142858"/>
         </scene>
         <!--Colab-->
         <scene sceneID="D7w-mH-fPA">
