@@ -15,6 +15,19 @@ class Note{
     private(set) var note_desc: String!
     private(set) var note_title: String!
     
+    var dictionary: [String: Any] {
+        
+        return [
+            "note_id":note_id,
+            "user_id":user_id,
+            "note_desc":note_desc,
+            "note_title":note_title,
+        ]
+        
+    }
+    
+    
+    
     
     init(noteId: String, userId: String, noteDesc: String, noteTitle: String) {
         self.note_id = noteId

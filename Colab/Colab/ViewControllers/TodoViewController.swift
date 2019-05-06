@@ -15,7 +15,6 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var addButton: UIButton!
     
     let currentUserId = Auth.auth().currentUser?.uid
@@ -85,65 +84,68 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell") as! TodoCell
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.white
-        cell.selectedBackgroundView = backgroundView
+        cell.checklist = todos[indexPath.row]
         cell.congifure(checklist: todos[indexPath.row])
         return cell
     }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            
+            // handle delete (by removing the data from your array and updating the tableview)
+            deleteTodoItemFromFirestoreDB(checklistId: todos[indexPath.row].checklist_id);
+            todos.remove(at: indexPath.row)
+            tableView.reloadData()
+            print( "Deleted \(indexPath.row)")
+        }
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.cellForRow(at:indexPath) as! TodoCell
+        let cell = tableView.cellForRow(at:indexPath) as? TodoCell
         
-          print("\(cell.checkBox.isSelected)")
-        if cell.checkBox.isSelected == true {
-            
-            cell.checkBox.isSelected = false
-            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(todos[indexPath.row].checklist_id)
-            
-            docRef.updateData(["status" : "Incomplete"]) { (err) in
-                
-                if let err = err {
-                    print("Error updating document: \(err)")
-                } else {
-                    print("Document successfully updated as Complete!!")
-                    
-                }
-            }
-            
-        }else if cell.checkBox.isSelected == false {
-            
-            
-            cell.checkBox.isSelected = true
-            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(todos[indexPath.row].checklist_id)
-            
-            docRef.updateData(["status" : "Complete"]) { (err) in
-                
-                if let err = err {
-                    print("Error updating document: \(err)")
-                } else {
-                
-                    print("Document successfully updated as Incomplete")
-                    
-                }
-            }
-            
-        }
-        
-        
-        
-        
+        cell?.setSelected(false, animated: true)
+    
     }
-
+    
     @IBAction func addNewTodoItemAction(_ sender: Any) {
+        
         let vc = AddNewTodoViewController()
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
+        vc.addNewTodoItemProtocol = self
         self.present(vc, animated: true, completion: nil)
     }
     
     
+    func deleteTodoItemFromFirestoreDB(checklistId: String){
+        
+        let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(checklistId)
+        
+        docRef.delete { (error) in
+            if error == nil {
+                print("Successfully deleted item \(checklistId)")
+            }else{
+                print(error?.localizedDescription as Any)
+            }
+        }
+    }
+    
+
+}
+
+extension TodoViewController: AddNewTodoItemProtocol {
+    
+    func notifyTodoList() {
+        readChecklistFromFirestoreDB(userId: currentUserId!)
+        tableView.reloadData()
+    }
     
     
     

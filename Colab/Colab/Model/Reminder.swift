@@ -18,6 +18,20 @@ class Reminder{
     private(set) var date: String!
     
     
+    var dictionary: [String: Any] {
+        
+        return [
+            "reminder_id":reminder_id,
+            "user_id":user_id,
+            "desc":desc,
+            "title":title,
+            "time":time,
+            "date":date
+        ]
+        
+    }
+    
+    
     init(reminderId: String, userId: String, remDesc: String, remTitle: String, remTime: String, remDate: String) {
         self.reminder_id = reminderId
         self.user_id = userId
