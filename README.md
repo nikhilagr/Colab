@@ -22,7 +22,7 @@ Colab is a task manager app that helps you organize,plan,track your tasks.Colab 
 
 Required Must-have Stories
 
-* New user can register through app.
+* New user can register through app.     
 * Active user must be able to login into app.
 * Can create personalized to do list.
 * Can set reminders for an event.
