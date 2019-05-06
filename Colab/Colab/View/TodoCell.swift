@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class TodoCell: UITableViewCell {
     
     @IBOutlet weak var todoLabel: UILabel!
     @IBOutlet weak var checkBox: UIButton!
+    var checklist: Checklist? = nil
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,11 +36,78 @@ class TodoCell: UITableViewCell {
     
     @IBAction func onCheckboxTap(_ sender: UIButton) {
     
+        print("STATUS::: \(sender.isSelected)")
+        let checklistId = checklist?.checklist_id ?? " "
+        
         if sender.isSelected{
             sender.isSelected = false
+            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(checklistId)
+            
+            docRef.updateData(["status" : "Incomplete"]) { (err) in
+                
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    
+                    print("Document successfully updated as Incomplete")
+                    
+                }
+            }
         }else{
             sender.isSelected = true
+            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(checklistId)
+            
+            docRef.updateData(["status" : "Complete"]) { (err) in
+                
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    
+                    print("Document successfully updated as Complete")
+                    
+                }
+            }
+            
         }
+        
+        
+//
+//        if sender.isSelected == true {
+//
+//            sender.isSelected = false
+//            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(checklistId)
+//
+//            docRef.updateData(["status" : "Incomplete"]) { (err) in
+//
+//                if let err = err {
+//                    print("Error updating document: \(err)")
+//                } else {
+//                    print("Document successfully updated as Complete!!")
+//
+//                }
+//            }
+//
+//        }else if sender.isSelected == false {
+//
+//
+//            sender.isSelected = true
+//            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(checklistId)
+//
+//            docRef.updateData(["status" : "Complete"]) { (err) in
+//
+//                if let err = err {
+//                    print("Error updating document: \(err)")
+//                } else {
+//
+//                    print("Document successfully updated as Incomplete")
+//
+//                }
+//            }
+//
+//        }
+
+
+        
     }
     
     

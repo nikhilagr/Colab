@@ -10,9 +10,15 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
+protocol AddNewTodoItemProtocol {
+    func notifyTodoList()
+}
 
 class AddNewTodoViewController: UIViewController {
-
+    
+    var addNewTodoItemProtocol: AddNewTodoItemProtocol!
+    
+    
     @IBOutlet weak var todoItemTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +28,10 @@ class AddNewTodoViewController: UIViewController {
 
     @IBAction func addNewTodoAction(_ sender: Any) {
         insertChecklistItemInFirestoreDB()
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            
+            self.addNewTodoItemProtocol.notifyTodoList()
+        }
     }
     
     @IBAction func cancleAction(_ sender: Any) {

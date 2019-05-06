@@ -26,6 +26,7 @@
 		F8A0E338227F591B0084EDC0 /* CustomReminderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8A0E336227F591B0084EDC0 /* CustomReminderCell.xib */; };
 		F8A0E33B227F7B160084EDC0 /* AddNewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E339227F7B160084EDC0 /* AddNewTodoViewController.swift */; };
 		F8A0E33C227F7B160084EDC0 /* AddNewTodoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8A0E33A227F7B160084EDC0 /* AddNewTodoViewController.xib */; };
+		F8A7A21F22800D7F003DC701 /* AddNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A7A21E22800D7F003DC701 /* AddNewNoteViewController.swift */; };
 		F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD8F22592E6200199647 /* AppDelegate.swift */; };
 		F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7BD9122592E6200199647 /* LoginViewController.swift */; };
 		F8B7BD9522592E6200199647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B7BD9322592E6200199647 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		F8A0E336227F591B0084EDC0 /* CustomReminderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomReminderCell.xib; sourceTree = "<group>"; };
 		F8A0E339227F7B160084EDC0 /* AddNewTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTodoViewController.swift; sourceTree = "<group>"; };
 		F8A0E33A227F7B160084EDC0 /* AddNewTodoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewTodoViewController.xib; sourceTree = "<group>"; };
+		F8A7A21E22800D7F003DC701 /* AddNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNoteViewController.swift; sourceTree = "<group>"; };
 		F8B7BD8C22592E6200199647 /* Colab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B7BD8F22592E6200199647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B7BD9122592E6200199647 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				F8A0E332227F50360084EDC0 /* AddNewReminderViewController.swift */,
 				F8A0E339227F7B160084EDC0 /* AddNewTodoViewController.swift */,
 				F8A0E33A227F7B160084EDC0 /* AddNewTodoViewController.xib */,
+				F8A7A21E22800D7F003DC701 /* AddNewNoteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				C19E5FC02260203700EEE918 /* Note.swift in Sources */,
 				C1A87BF62272F2E6005468BB /* SettingsViewController.swift in Sources */,
 				F8A0E33B227F7B160084EDC0 /* AddNewTodoViewController.swift in Sources */,
+				F8A7A21F22800D7F003DC701 /* AddNewNoteViewController.swift in Sources */,
 				C19E5FC22260215000EEE918 /* Reminder.swift in Sources */,
 				C1A87BEC2272F137005468BB /* Constants.swift in Sources */,
 			);

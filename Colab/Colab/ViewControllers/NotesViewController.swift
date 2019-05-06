@@ -51,6 +51,46 @@ class NotesViewController: UIViewController,UITableViewDataSource,UITableViewDel
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let newNoteVC = storyBoard.instantiateViewController(withIdentifier: "AddNewNoteViewController") as? AddNewNoteViewController {
+            newNoteVC.note = notes[indexPath.row]
+            self.navigationController?.pushViewController(newNoteVC, animated: true)
+        }
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+            return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        deleteNoteFromFirestoreDB(noteId: notes[indexPath.row].note_id)
+        notes.remove(at: indexPath.row)
+        tableView.reloadData()
+        print( "Deleted \(indexPath.row)")
+    }
+    
+    @IBAction func onAddNewNoteAction(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let newNoteVC = storyBoard.instantiateViewController(withIdentifier: "AddNewNoteViewController") as? AddNewNoteViewController {
+            
+            self.navigationController?.pushViewController(newNoteVC, animated: true)
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     func readNotesFromFirestore(userID: String){
         notes = []
         let ref = Firestore.firestore().collection(NOTE_DB).whereField("user_id", isEqualTo: userID)
@@ -76,6 +116,21 @@ class NotesViewController: UIViewController,UITableViewDataSource,UITableViewDel
         }
     
     }
+    
+    func deleteNoteFromFirestoreDB(noteId: String){
+        
+        let docRef = Firestore.firestore().collection(NOTE_DB).document(noteId)
+        
+        docRef.delete { (error) in
+            if error == nil {
+                print("Successfully deleted item \(noteId)")
+            }else{
+                print(error?.localizedDescription as Any)
+            }
+        }
+    }
+    
+    
 
 }
 
