@@ -13,10 +13,13 @@ import FirebaseAuth
 
 class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var todoAddTextField: UITextField!
+    
     @IBOutlet weak var tableView: UITableView!
-    private var checklistCollectionRef: CollectionReference!
-    private var checklistDocumentRef: DocumentReference!
+    
+    @IBOutlet weak var addButton: UIButton!
+    
+    let currentUserId = Auth.auth().currentUser?.uid
+    
     var todos: [Checklist] = []
    
     
@@ -26,16 +29,21 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: CGRect.zero)
        
+        addButton.layer.cornerRadius = addButton.frame.height/2
         // Do any additional setup after loading the view.
         
-        // getting reference to the checklist collection
-        checklistCollectionRef = Firestore.firestore().collection(CHECKLIST_REF)
+        print("IN TVC VIEWDIDLOAD")
+        
+        
     }
     
-    func displayTodo(){
+
+    func readChecklistFromFirestoreDB(userId:String){
         self.todos = []
         
-        checklistCollectionRef.getDocuments { (snapshot, err) in
+         let docRef =  Firestore.firestore().collection(CHECKLIST_REF).whereField("user_id", isEqualTo: userId)
+        
+            docRef.getDocuments { (snapshot, err) in
             if let err = err{
                 debugPrint("Error fetching documents\(err)")
             }else{
@@ -43,8 +51,8 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 for document in snap.documents{
                     let data = document.data()
                     let checklist_id = data["checklist_id"] as? String ?? ""
-                    let status = data["status"] as? String ?? "incomplete"
-                    let title = data["title"] as? String ?? "Title"
+                    let status = data["status"] as? String ?? ""
+                    let title = data["title"] as? String ?? ""
                     let user_id = data["user_id"] as? String ?? ""
 
                     let newTodo = Checklist(checklistId: checklist_id, userId: user_id, status: status, title: title)
@@ -57,9 +65,14 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
     
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        readChecklistFromFirestoreDB(userId: currentUserId!)
+        self.tableView.reloadData()
+        print("IN TVC viewWillAppear")
+    }
     override func viewDidAppear(_ animated: Bool) {
-        displayTodo()
+        print("IN TVC viewDidAppear")
     }
     
     
@@ -72,40 +85,66 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell") as! TodoCell
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.white
+        cell.selectedBackgroundView = backgroundView
         cell.congifure(checklist: todos[indexPath.row])
         return cell
     }
     
-    
-    @IBAction func onAddTap(_ sender: Any) {
-        let todoDesc = todoAddTextField.text!
-        if(!todoDesc.isEmpty){
-            let userid = Auth.auth().currentUser?.uid
-            let documentid = checklistDocumentRef?.documentID
-            print("===========\(documentid)==============")
-            checklistCollectionRef.addDocument(data: ["checklist_id": documentid, STATUS : "incomplete",
-                                                      TITLE: todoDesc, USER_ID: userid]) { (err) in
-                                                        if let err = err{
-                                                            print(todoDesc)
-                                                            print("Unable to publish")
-                                                            debugPrint("Error adding \(err)")
-                                                        }
-                                                        else{
-                                                            print("Document added")
-                                                        }
-                                                        // once the todo is saved call displayTodo() to load the new todo
-                                                        self.displayTodo()
-                                                        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at:indexPath) as! TodoCell
+        
+          print("\(cell.checkBox.isSelected)")
+        if cell.checkBox.isSelected == true {
+            
+            cell.checkBox.isSelected = false
+            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(todos[indexPath.row].checklist_id)
+            
+            docRef.updateData(["status" : "Incomplete"]) { (err) in
+                
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated as Complete!!")
+                    
+                }
             }
-            // clear the text field
-            self.todoAddTextField.text = ""
+            
+        }else if cell.checkBox.isSelected == false {
+            
+            
+            cell.checkBox.isSelected = true
+            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(todos[indexPath.row].checklist_id)
+            
+            docRef.updateData(["status" : "Complete"]) { (err) in
+                
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                
+                    print("Document successfully updated as Incomplete")
+                    
+                }
+            }
+            
         }
-        else{
-            return
-        }
+        
+        
+        
+        
+    }
+
+    @IBAction func addNewTodoItemAction(_ sender: Any) {
+        let vc = AddNewTodoViewController()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
     
     
-    // defining delete handlers
+    
+    
     
 }

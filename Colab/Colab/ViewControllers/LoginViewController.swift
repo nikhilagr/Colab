@@ -21,6 +21,12 @@ class LoginViewController: UIViewController {
     
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if UserDefaults.standard.bool(forKey: "userloggedIn") == true {
+            self.performSegue(withIdentifier: "loginSucess", sender: self)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,8 +55,11 @@ class LoginViewController: UIViewController {
                     
                     if((user?.isEmailVerified)!){
                         //Login to HOME controller
+                        
+                        UserDefaults.standard.set(true, forKey: "userloggedIn")
+                        
                         self.performSegue(withIdentifier: "loginSucess", sender: self)
-                        print("I am at HOME Controller")
+                        
                     }else{
                         
                         let alert = UIAlertController(title: "Email Verification", message: "Please check your inbox for verification link", preferredStyle: .alert)
@@ -61,7 +70,9 @@ class LoginViewController: UIViewController {
                 }else{
                     
                     let alert = UIAlertController(title: "Failed to login", message: error!.localizedDescription, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil) )
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                    
+                    }))
                     self.present(alert, animated: true, completion: nil)
                     
                     

@@ -17,6 +17,17 @@ class Checklist{
     private(set) var status: String!
     private(set) var title: String!
     
+    var dictionary: [String: Any] {
+        
+        return [
+            "checklist_id":checklist_id,
+            "user_id":user_id,
+            "status":status,
+            "title":title,
+        ]
+        
+    }
+    
     
     init(checklistId: String, userId: String, status: String, title: String) {
         self.checklist_id = checklistId
