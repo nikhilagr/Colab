@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Colab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Colab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
         <!--Registration View Controller-->
         <scene sceneID="BzT-Kd-Jvw">
             <objects>
-                <viewController id="BG2-8j-Izv" customClass="RegistrationViewController" customModule="Colab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="BG2-8j-Izv" customClass="RegistrationViewController" customModule="Colab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yht-6c-Wec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -641,7 +641,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-xx-orz">
-                                                    <rect key="frame" x="36" y="19" width="24" height="24"/>
+                                                    <rect key="frame" x="36" y="19" width="157" height="157"/>
                                                     <state key="normal" backgroundImage="icons8-round-24"/>
                                                     <state key="selected" backgroundImage="icons8-ok-24"/>
                                                 </button>
@@ -768,19 +768,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rj-B3-17e">
-                                                    <rect key="frame" x="228" y="54" width="9" height="17"/>
+                                                    <rect key="frame" x="361" y="54" width="9" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="icons8-clipboard-24" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-7Y-tru">
-                                                    <rect key="frame" x="256" y="50" width="24" height="24"/>
+                                                    <rect key="frame" x="389" y="-16.5" width="157" height="157"/>
                                                 </imageView>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="icons8-user-account-24" translatesAutoresizingMaskIntoConstraints="NO" id="DIy-g2-RdX">
-                                                    <rect key="frame" x="201" y="51" width="24" height="23"/>
+                                                    <rect key="frame" x="201" y="51" width="157" height="23"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0n-JX-RGX">
-                                                    <rect key="frame" x="288" y="54" width="9" height="17"/>
+                                                    <rect key="frame" x="554" y="54" width="9" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -850,21 +850,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-add-list-filled-24" width="24" height="24"/>
-        <image name="icons8-add-user-group-man-white-24" width="24" height="24"/>
-        <image name="icons8-admin-settings-male-24" width="24" height="24"/>
-        <image name="icons8-alarm-24" width="24" height="24"/>
-        <image name="icons8-calendar-24" width="24" height="24"/>
-        <image name="icons8-checklist-24" width="24" height="24"/>
-        <image name="icons8-clipboard-24" width="24" height="24"/>
-        <image name="icons8-clock-24" width="24" height="24"/>
-        <image name="icons8-edit-row-30" width="30" height="30"/>
-        <image name="icons8-ok-24" width="24" height="24"/>
-        <image name="icons8-queue-filled-30" width="30" height="30"/>
-        <image name="icons8-round-24" width="24" height="24"/>
-        <image name="icons8-task-24" width="24" height="24"/>
-        <image name="icons8-user-account-24" width="24" height="24"/>
-        <image name="icons8-white-add-file-filled-24" width="24" height="24"/>
-        <image name="icons8-white-add-reminder-24" width="24" height="24"/>
+        <image name="icons8-add-list-filled-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-add-user-group-man-white-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-admin-settings-male-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-alarm-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-calendar-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-checklist-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-clipboard-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-clock-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-edit-row-30" width="154.28572082519531" height="154.28572082519531"/>
+        <image name="icons8-ok-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-queue-filled-30" width="154.28572082519531" height="154.28572082519531"/>
+        <image name="icons8-round-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-task-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-user-account-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-white-add-file-filled-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-white-add-reminder-24" width="157.09091186523438" height="157.09091186523438"/>
     </resources>
 </document>
