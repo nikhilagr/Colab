@@ -15,6 +15,7 @@ let TITLE = "title"
 let USER_ID = "user_id"
 let NOTE_DB = "notes"
 let REMINDER_DB = "reminders"
+let PROJECT_DB = "projects"
 
 
 
