@@ -75,6 +75,7 @@ class NotesViewController: UIViewController,UITableViewDataSource,UITableViewDel
     }
     
     @IBAction func onAddNewNoteAction(_ sender: Any) {
+        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let newNoteVC = storyBoard.instantiateViewController(withIdentifier: "AddNewNoteViewController") as? AddNewNoteViewController {
             

@@ -27,6 +27,17 @@
 		F89194A322813B41009A2E13 /* ColabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89194A222813B41009A2E13 /* ColabCell.swift */; };
 		F89194A622813F6A009A2E13 /* ColabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89194A522813F6A009A2E13 /* ColabViewModel.swift */; };
 		F89194A822815223009A2E13 /* Colab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89194A722815223009A2E13 /* Colab.swift */; };
+		F89194AA22821D95009A2E13 /* AddNewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89194A922821D95009A2E13 /* AddNewProjectViewController.swift */; };
+		F89194AC22821DD2009A2E13 /* AddMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89194AB22821DD2009A2E13 /* AddMembersViewController.swift */; };
+		F89194AE22821E29009A2E13 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89194AD22821E29009A2E13 /* AddTaskViewController.swift */; };
+		F89194B022821EA4009A2E13 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89194AF22821EA4009A2E13 /* ProjectDetailsViewController.swift */; };
+		F892811C228274430014ADCE /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F892811B228274430014ADCE /* MemberCell.swift */; };
+		F892811E2282746B0014ADCE /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F892811D2282746B0014ADCE /* TaskCell.swift */; };
+		F8928120228274960014ADCE /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F892811F228274960014ADCE /* ContactCell.swift */; };
+		F8928122228274B70014ADCE /* AssigneeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8928121228274B70014ADCE /* AssigneeCell.swift */; };
+		F892812422827E730014ADCE /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F892812322827E730014ADCE /* Contact.swift */; };
+		F8928126228280D00014ADCE /* Assignee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8928125228280D00014ADCE /* Assignee.swift */; };
+		F8928128228281450014ADCE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8928127228281450014ADCE /* Task.swift */; };
 		F8A0E32F227E4E790084EDC0 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E32E227E4E790084EDC0 /* NotesCell.swift */; };
 		F8A0E331227E4F890084EDC0 /* RemindersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E330227E4F890084EDC0 /* RemindersCell.swift */; };
 		F8A0E333227F50360084EDC0 /* AddNewReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0E332227F50360084EDC0 /* AddNewReminderViewController.swift */; };
@@ -42,6 +53,7 @@
 		F8DC289322593CB000B4FC70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */; };
 		F8DC5BB9226068B4004133C8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC5BB8226068B4004133C8 /* RegistrationViewController.swift */; };
 		F8F5710F227D341E005C08F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F5710E227D341E005C08F6 /* Assets.xcassets */; };
+		F8F84CBF2283D7B700133DDC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84CBE2283D7B700133DDC /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +79,17 @@
 		F89194A222813B41009A2E13 /* ColabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabCell.swift; sourceTree = "<group>"; };
 		F89194A522813F6A009A2E13 /* ColabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabViewModel.swift; sourceTree = "<group>"; };
 		F89194A722815223009A2E13 /* Colab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colab.swift; sourceTree = "<group>"; };
+		F89194A922821D95009A2E13 /* AddNewProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProjectViewController.swift; sourceTree = "<group>"; };
+		F89194AB22821DD2009A2E13 /* AddMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMembersViewController.swift; sourceTree = "<group>"; };
+		F89194AD22821E29009A2E13 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		F89194AF22821EA4009A2E13 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
+		F892811B228274430014ADCE /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
+		F892811D2282746B0014ADCE /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		F892811F228274960014ADCE /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		F8928121228274B70014ADCE /* AssigneeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssigneeCell.swift; sourceTree = "<group>"; };
+		F892812322827E730014ADCE /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		F8928125228280D00014ADCE /* Assignee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignee.swift; sourceTree = "<group>"; };
+		F8928127228281450014ADCE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F8A0E32E227E4E790084EDC0 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
 		F8A0E330227E4F890084EDC0 /* RemindersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCell.swift; sourceTree = "<group>"; };
 		F8A0E332227F50360084EDC0 /* AddNewReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewReminderViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +107,7 @@
 		F8DC289222593CB000B4FC70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8DC5BB8226068B4004133C8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		F8F5710E227D341E005C08F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8F84CBE2283D7B700133DDC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +147,7 @@
 				C19E5FC12260215000EEE918 /* Reminder.swift */,
 				C19E5FC32260221500EEE918 /* User.swift */,
 				F89194A722815223009A2E13 /* Colab.swift */,
+				F8928127228281450014ADCE /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,9 +166,13 @@
 			children = (
 				F8A0E334227F58B40084EDC0 /* cells */,
 				C1A87BF82272F3AB005468BB /* TodoCell.swift */,
+				F892811B228274430014ADCE /* MemberCell.swift */,
 				F8A0E32E227E4E790084EDC0 /* NotesCell.swift */,
 				F8A0E330227E4F890084EDC0 /* RemindersCell.swift */,
 				F89194A222813B41009A2E13 /* ColabCell.swift */,
+				F892811D2282746B0014ADCE /* TaskCell.swift */,
+				F892811F228274960014ADCE /* ContactCell.swift */,
+				F8928121228274B70014ADCE /* AssigneeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +194,10 @@
 				C1EDF82A22801D8000E6AFD6 /* WalkthroughPageViewController.swift */,
 				C1EDF82C2280274600E6AFD6 /* WalkthroughViewController.swift */,
 				F8A7A21E22800D7F003DC701 /* AddNewNoteViewController.swift */,
+				F89194A922821D95009A2E13 /* AddNewProjectViewController.swift */,
+				F89194AB22821DD2009A2E13 /* AddMembersViewController.swift */,
+				F89194AD22821E29009A2E13 /* AddTaskViewController.swift */,
+				F89194AF22821EA4009A2E13 /* ProjectDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,6 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				F89194A522813F6A009A2E13 /* ColabViewModel.swift */,
+				F892812322827E730014ADCE /* Contact.swift */,
+				F8928125228280D00014ADCE /* Assignee.swift */,
+				F8F84CBE2283D7B700133DDC /* UserModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -361,30 +397,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89194AC22821DD2009A2E13 /* AddMembersViewController.swift in Sources */,
 				F8A0E32F227E4E790084EDC0 /* NotesCell.swift in Sources */,
 				C1A87BF42272F2D0005468BB /* ColabViewController.swift in Sources */,
 				F8B7BD9222592E6200199647 /* LoginViewController.swift in Sources */,
+				F892811C228274430014ADCE /* MemberCell.swift in Sources */,
 				C1EDF82922801B9C00E6AFD6 /* WalkthroughContentViewController.swift in Sources */,
+				F8928120228274960014ADCE /* ContactCell.swift in Sources */,
 				F83FE834227D79290027905A /* ReminderViewController.swift in Sources */,
+				F8928126228280D00014ADCE /* Assignee.swift in Sources */,
 				F8A0E337227F591B0084EDC0 /* CustomReminderCell.swift in Sources */,
 				C1EDF82B22801D8000E6AFD6 /* WalkthroughPageViewController.swift in Sources */,
 				C1A87BEE2272F28C005468BB /* TodoViewController.swift in Sources */,
+				F8928128228281450014ADCE /* Task.swift in Sources */,
+				F89194B022821EA4009A2E13 /* ProjectDetailsViewController.swift in Sources */,
 				F8B7BD9022592E6200199647 /* AppDelegate.swift in Sources */,
 				F89194A622813F6A009A2E13 /* ColabViewModel.swift in Sources */,
 				C19E5FC42260221500EEE918 /* User.swift in Sources */,
 				F8A0E333227F50360084EDC0 /* AddNewReminderViewController.swift in Sources */,
 				F8A0E331227E4F890084EDC0 /* RemindersCell.swift in Sources */,
+				F89194AA22821D95009A2E13 /* AddNewProjectViewController.swift in Sources */,
+				F8928122228274B70014ADCE /* AssigneeCell.swift in Sources */,
 				C19E5FBE22601EE900EEE918 /* Checklist.swift in Sources */,
 				F8DC5BB9226068B4004133C8 /* RegistrationViewController.swift in Sources */,
+				F89194AE22821E29009A2E13 /* AddTaskViewController.swift in Sources */,
 				C10EF11122815ECE00BFC564 /* ReminderNotify.swift in Sources */,
 				C1A87BF02272F2A2005468BB /* NotesViewController.swift in Sources */,
 				C1A87BF92272F3AB005468BB /* TodoCell.swift in Sources */,
 				C19E5FC02260203700EEE918 /* Note.swift in Sources */,
 				C1A87BF62272F2E6005468BB /* SettingsViewController.swift in Sources */,
 				F89194A822815223009A2E13 /* Colab.swift in Sources */,
+				F892812422827E730014ADCE /* Contact.swift in Sources */,
 				F8A0E33B227F7B160084EDC0 /* AddNewTodoViewController.swift in Sources */,
 				F89194A322813B41009A2E13 /* ColabCell.swift in Sources */,
 				F8A7A21F22800D7F003DC701 /* AddNewNoteViewController.swift in Sources */,
+				F892811E2282746B0014ADCE /* TaskCell.swift in Sources */,
+				F8F84CBF2283D7B700133DDC /* UserModel.swift in Sources */,
 				C19E5FC22260215000EEE918 /* Reminder.swift in Sources */,
 				C1A87BEC2272F137005468BB /* Constants.swift in Sources */,
 				C1EDF82D2280274600E6AFD6 /* WalkthroughViewController.swift in Sources */,

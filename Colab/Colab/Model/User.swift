@@ -33,6 +33,12 @@ class User{
         
     }
     
+    init(userId: String,firstName: String, lastName: String,email: String){
+        self.user_id = userId
+        self.first_name = firstName
+        self.last_name = lastName
+        self.email = email
+    }
     
     init(userId: String, userauthId: String, firstName: String, lastName: String, profileUrl: String, email: String, dob: String) {
         

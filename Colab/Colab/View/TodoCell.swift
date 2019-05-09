@@ -15,7 +15,6 @@ class TodoCell: UITableViewCell {
     @IBOutlet weak var checkBox: UIButton!
     var checklist: Checklist? = nil
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -69,44 +68,6 @@ class TodoCell: UITableViewCell {
             }
             
         }
-        
-        
-//
-//        if sender.isSelected == true {
-//
-//            sender.isSelected = false
-//            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(checklistId)
-//
-//            docRef.updateData(["status" : "Incomplete"]) { (err) in
-//
-//                if let err = err {
-//                    print("Error updating document: \(err)")
-//                } else {
-//                    print("Document successfully updated as Complete!!")
-//
-//                }
-//            }
-//
-//        }else if sender.isSelected == false {
-//
-//
-//            sender.isSelected = true
-//            let docRef = Firestore.firestore().collection(CHECKLIST_REF).document(checklistId)
-//
-//            docRef.updateData(["status" : "Complete"]) { (err) in
-//
-//                if let err = err {
-//                    print("Error updating document: \(err)")
-//                } else {
-//
-//                    print("Document successfully updated as Incomplete")
-//
-//                }
-//            }
-//
-//        }
-
-
         
     }
     
