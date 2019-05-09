@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C14CEE142283FD80009F2F4D /* ColabTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CEE132283FD80009F2F4D /* ColabTaskViewController.swift */; };
 		C19E5FBE22601EE900EEE918 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FBD22601EE900EEE918 /* Checklist.swift */; };
 		C19E5FC02260203700EEE918 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FBF2260203700EEE918 /* Note.swift */; };
 		C19E5FC22260215000EEE918 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FC12260215000EEE918 /* Reminder.swift */; };
@@ -44,6 +45,7 @@
 		274D9BF6E8562A2D3E6FB95D /* Pods_Colab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD2BFC137B5BD659A13978C /* Pods-Colab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colab.release.xcconfig"; path = "Pods/Target Support Files/Pods-Colab/Pods-Colab.release.xcconfig"; sourceTree = "<group>"; };
 		7A5AC1E42B940D139F90DC23 /* Pods-Colab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Colab/Pods-Colab.debug.xcconfig"; sourceTree = "<group>"; };
+		C14CEE132283FD80009F2F4D /* ColabTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabTaskViewController.swift; sourceTree = "<group>"; };
 		C19E5FBD22601EE900EEE918 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		C19E5FBF2260203700EEE918 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C19E5FC12260215000EEE918 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				C1EDF82A22801D8000E6AFD6 /* WalkthroughPageViewController.swift */,
 				C1EDF82C2280274600E6AFD6 /* WalkthroughViewController.swift */,
 				F8A7A21E22800D7F003DC701 /* AddNewNoteViewController.swift */,
+				C14CEE132283FD80009F2F4D /* ColabTaskViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -284,8 +287,9 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Colab/Pods-Colab-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Colab/Pods-Colab-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -299,6 +303,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -309,7 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Colab/Pods-Colab-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Colab/Pods-Colab-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AF3CBCB2D46C1A2A49E766BC /* [CP] Check Pods Manifest.lock */ = {
@@ -360,6 +365,7 @@
 				C19E5FC02260203700EEE918 /* Note.swift in Sources */,
 				C1A87BF62272F2E6005468BB /* SettingsViewController.swift in Sources */,
 				F8A0E33B227F7B160084EDC0 /* AddNewTodoViewController.swift in Sources */,
+				C14CEE142283FD80009F2F4D /* ColabTaskViewController.swift in Sources */,
 				F8A7A21F22800D7F003DC701 /* AddNewNoteViewController.swift in Sources */,
 				C19E5FC22260215000EEE918 /* Reminder.swift in Sources */,
 				C1A87BEC2272F137005468BB /* Constants.swift in Sources */,
@@ -511,7 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RBC974B87F;
+				DEVELOPMENT_TEAM = 7JSDHXMHC5;
 				INFOPLIST_FILE = Colab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -530,7 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RBC974B87F;
+				DEVELOPMENT_TEAM = 7JSDHXMHC5;
 				INFOPLIST_FILE = Colab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

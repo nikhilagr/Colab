@@ -18,6 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") != true {
+            let storyBoard = UIStoryboard(name: "Onboarding", bundle: nil)
+            if let newOnboardingVC = storyBoard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+                self.window?.rootViewController = newOnboardingVC
+            }
+            else{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+                    self.window?.rootViewController = loginVC
+                }
+            }
+            
+        }
+        else{
+            print("Inside the else")
+        }
         
         return true
     }

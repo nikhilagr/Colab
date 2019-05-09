@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //print(UserDefaults.standard.bool(forKey: "hasViewedWalkthrough"))
         
     }
     
