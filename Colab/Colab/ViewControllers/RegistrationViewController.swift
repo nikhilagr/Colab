@@ -19,7 +19,6 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var conPassTF: UITextField!
     @IBOutlet weak var dobTF: UITextField!
-    
 
     var firstName: String = ""
     var lastName: String = ""
