@@ -15,6 +15,9 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
     
     @IBOutlet weak var colabCollectionView: UICollectionView!
     @IBOutlet weak var fabAddButton: UIButton!
+    
+    
+    
     let currentUserId : String = Auth.auth().currentUser?.uid ?? " "
     
     var projects: [ColabViewModel] = []
@@ -24,6 +27,7 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
        readProjectsFromFireStoreDb(userId: currentUserId)
        colabCollectionView.reloadData()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         colabCollectionView.delegate = self
@@ -63,6 +67,8 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
     
     func readProjectsFromFireStoreDb(userId: String){
         
+        projects = []
+        
         let docRef = Firestore.firestore().collection("users").document(currentUserId)
         
         docRef.getDocument { (documentSnapshot, error) in
@@ -71,7 +77,7 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
                 let data = documentSnapshot?.data()
                 let projectList: [String] = data?["projects"] as? [String] ?? [""]
                 
-                print("List of Projects: \(projectList)")
+                
                 // for each projectId grab project details and fill viewmodel
                 for proj in projectList {
                    
@@ -83,7 +89,6 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
                         if err == nil{
                             
                             let datanew = docuSnapShot?.data()
-                            print("DATA IS: \(datanew)")
                             let project_id = datanew?["project_id"] as? String ?? " "
                             let title = datanew?["title"] as? String ?? ""
                             let description = datanew?["description"] as? String ?? ""
@@ -93,7 +98,7 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
                             let tasks = datanew?["tasks"] as? [String] ?? [""]
                             let creator = datanew?["creator_id"] as? String ?? ""
                             
-                            print("Creator is \(creator)")
+                            
                             
                             let projectC = Colab(projectId:project_id, projectTitle: title, projectDesc: description, startDate: start_date, endDate: end_date, members: members, tasks: tasks,creatorId: creator)
                             
@@ -105,8 +110,8 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
                                 if er == nil{
                                     
                                     let dat =  docSanp?.data()
-                                    owner = "\(dat?["firtst_name"] ?? " ") \(dat?["last_name"] ?? " ")"
-                                    print("Owner is \(owner)")
+                                    owner = "\(dat?["first_name"] ?? " ") \(dat?["last_name"] ?? " ")"
+                                    
                                     
                                         let projectVM = ColabViewModel(projectName: title, projectOwner: owner, projectMembers: String(members.count), projectTasks: String(tasks.count), projectDue: end_date, projectDesc: description)
                                        self.projects.append(projectVM)
@@ -126,6 +131,19 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
             }
         }
     }
+    
+    
+    
+    @IBAction func addProjectAction(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let newProjVC = storyBoard.instantiateViewController(withIdentifier: "AddNewProjectViewController") as? AddNewProjectViewController {
+            
+            self.navigationController?.pushViewController(newProjVC, animated: true)
+            
+        }
+    }
+    
 
 }
 
