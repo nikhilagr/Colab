@@ -56,13 +56,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5b-Um-yTn">
-                                <rect key="frame" x="124" y="488" width="166" height="33"/>
+                                <rect key="frame" x="48" y="488" width="318" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" red="0.36862745098039218" green="0.44705882352941173" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Forgot password?"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4q3-gu-TN6">
-                                <rect key="frame" x="84" y="553" width="246" height="33"/>
+                                <rect key="frame" x="48" y="553" width="318" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" red="0.36862745098039218" green="0.44705882352941173" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Send verification email again!"/>
@@ -70,27 +70,27 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xfu-le-DOO" firstAttribute="top" secondItem="FPc-wK-240" secondAttribute="bottom" constant="24" id="13I-0o-ySq"/>
-                            <constraint firstItem="32j-uj-EaI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="1UX-5e-dl5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v5b-Um-yTn" secondAttribute="trailing" constant="124" id="5QR-Ma-qfh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FPc-wK-240" secondAttribute="trailing" constant="48" id="5x4-ze-a7v"/>
-                            <constraint firstItem="v5b-Um-yTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="99l-TN-gvP"/>
-                            <constraint firstItem="4q3-gu-TN6" firstAttribute="top" secondItem="v5b-Um-yTn" secondAttribute="bottom" constant="32" id="LzL-Hf-25X"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xfu-le-DOO" secondAttribute="trailing" constant="48" id="NsY-2h-hM4"/>
-                            <constraint firstItem="idO-pO-OW9" firstAttribute="top" secondItem="cyZ-qW-Jfb" secondAttribute="bottom" constant="64" id="O0e-Vo-PqE"/>
-                            <constraint firstItem="FPc-wK-240" firstAttribute="top" secondItem="32j-uj-EaI" secondAttribute="bottom" constant="64" id="PFq-UT-oCV"/>
-                            <constraint firstItem="xfu-le-DOO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="PH0-cT-Q15"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="idO-pO-OW9" secondAttribute="trailing" constant="48" id="QeO-Ah-bHf"/>
-                            <constraint firstItem="4q3-gu-TN6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="ST3-ur-Oi6"/>
-                            <constraint firstItem="FPc-wK-240" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="TaY-lG-JYJ"/>
-                            <constraint firstItem="cyZ-qW-Jfb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="YZf-sD-9hO"/>
-                            <constraint firstItem="v5b-Um-yTn" firstAttribute="top" secondItem="xfu-le-DOO" secondAttribute="bottom" constant="64" id="ZwT-Xl-rQ5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="32j-uj-EaI" secondAttribute="trailing" constant="48" id="cZv-hr-gQn"/>
-                            <constraint firstItem="cyZ-qW-Jfb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="cis-Qj-XbY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4q3-gu-TN6" secondAttribute="trailing" constant="84" id="gLY-19-FNU"/>
-                            <constraint firstItem="32j-uj-EaI" firstAttribute="top" secondItem="idO-pO-OW9" secondAttribute="bottom" constant="32" id="icf-ZZ-FwT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cyZ-qW-Jfb" secondAttribute="trailing" constant="144" id="of4-JZ-u6a"/>
-                            <constraint firstItem="idO-pO-OW9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="p5i-is-d4o"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="leading" secondItem="32j-uj-EaI" secondAttribute="leading" id="06r-FY-kAF"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="leading" secondItem="idO-pO-OW9" secondAttribute="leading" id="2b2-o1-fMf"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="trailing" secondItem="4q3-gu-TN6" secondAttribute="trailing" id="6YZ-uu-RWW"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="top" secondItem="FPc-wK-240" secondAttribute="bottom" constant="24" id="9w5-ce-kUz"/>
+                            <constraint firstAttribute="bottom" secondItem="xfu-le-DOO" secondAttribute="bottom" constant="312" id="A9q-9x-dcc"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="trailing" secondItem="FPc-wK-240" secondAttribute="trailing" id="BS9-iB-Iqc"/>
+                            <constraint firstItem="v5b-Um-yTn" firstAttribute="top" secondItem="xfu-le-DOO" secondAttribute="bottom" constant="64" id="Cr8-Dj-iVx"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="trailing" secondItem="idO-pO-OW9" secondAttribute="trailing" id="Eny-JY-MRy"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="leading" secondItem="4q3-gu-TN6" secondAttribute="leading" id="KjV-YP-LGn"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="leading" secondItem="FPc-wK-240" secondAttribute="leading" id="PFy-ee-A9U"/>
+                            <constraint firstItem="FPc-wK-240" firstAttribute="top" secondItem="32j-uj-EaI" secondAttribute="bottom" constant="64" id="V3l-7p-9ds"/>
+                            <constraint firstItem="cyZ-qW-Jfb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="VJV-nH-AE1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v5b-Um-yTn" secondAttribute="trailing" constant="48" id="WEh-Dh-jHJ"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="centerX" secondItem="cyZ-qW-Jfb" secondAttribute="centerX" id="WlJ-Eq-Jz5"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="leading" secondItem="v5b-Um-yTn" secondAttribute="leading" id="gUQ-4N-byP"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="trailing" secondItem="32j-uj-EaI" secondAttribute="trailing" id="gvC-ph-NkO"/>
+                            <constraint firstItem="xfu-le-DOO" firstAttribute="trailing" secondItem="v5b-Um-yTn" secondAttribute="trailing" id="hIA-aJ-B8y"/>
+                            <constraint firstItem="32j-uj-EaI" firstAttribute="top" secondItem="idO-pO-OW9" secondAttribute="bottom" constant="32" id="jXM-TZ-Q12"/>
+                            <constraint firstItem="v5b-Um-yTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="oPs-xL-PXH"/>
+                            <constraint firstItem="4q3-gu-TN6" firstAttribute="top" secondItem="v5b-Um-yTn" secondAttribute="bottom" constant="32" id="uEh-MI-fcC"/>
+                            <constraint firstItem="cyZ-qW-Jfb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="y9M-qs-VmN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -284,9 +284,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YI-e6-iiF">
-                                <rect key="frame" x="55" y="558" width="303" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YI-e6-iiF">
+                                <rect key="frame" x="51" y="601" width="303" height="30"/>
                                 <color key="backgroundColor" red="0.36862745099999999" green="0.44705882349999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -297,6 +296,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0fD-Lg-xBr" firstAttribute="trailing" secondItem="8YI-e6-iiF" secondAttribute="trailing" constant="60" id="brP-cS-qOV"/>
+                            <constraint firstItem="8YI-e6-iiF" firstAttribute="leading" secondItem="0fD-Lg-xBr" secondAttribute="leading" constant="51" id="dmB-mN-jxM"/>
+                            <constraint firstItem="8YI-e6-iiF" firstAttribute="top" secondItem="0fD-Lg-xBr" secondAttribute="top" constant="537" id="yMo-VV-vnC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0fD-Lg-xBr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="3Pz-6f-Scl"/>
@@ -1112,7 +1116,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4q-6c-Hfe">
-                                                    <rect key="frame" x="20" y="46" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="46.666666666666664" width="374" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1239,7 +1243,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-xx-orz">
-                                                    <rect key="frame" x="36" y="19" width="24" height="24"/>
+                                                    <rect key="frame" x="36" y="19" width="157" height="157"/>
                                                     <state key="normal" backgroundImage="icons8-round-24"/>
                                                     <state key="selected" backgroundImage="icons8-ok-24"/>
                                                     <connections>
@@ -1325,10 +1329,10 @@
             </objects>
             <point key="canvasLocation" x="-381.15942028985512" y="2479.076086956522"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="KHD-NW-qTW">
             <objects>
-                <tabBarController id="gXA-lc-wNf" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabViewController" id="gXA-lc-wNf" customClass="TabViewController" customModule="Colab" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LFb-yA-TdE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1704,26 +1708,26 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-add-list-filled-24" width="24" height="24"/>
-        <image name="icons8-add-user-group-man-white-24" width="24" height="24"/>
-        <image name="icons8-admin-settings-male-24" width="24" height="24"/>
-        <image name="icons8-alarm-24" width="24" height="24"/>
-        <image name="icons8-calendar-24" width="24" height="24"/>
-        <image name="icons8-checklist-24" width="24" height="24"/>
-        <image name="icons8-clipboard-24" width="24" height="24"/>
-        <image name="icons8-clock-24" width="24" height="24"/>
-        <image name="icons8-edit-row-30" width="30" height="30"/>
-        <image name="icons8-ok-24" width="24" height="24"/>
-        <image name="icons8-plus-24" width="24" height="24"/>
-        <image name="icons8-queue-filled-30" width="30" height="30"/>
-        <image name="icons8-round-24" width="24" height="24"/>
-        <image name="icons8-task-24" width="24" height="24"/>
-        <image name="icons8-user-account-24" width="24" height="24"/>
-        <image name="icons8-white-add-file-filled-24" width="24" height="24"/>
-        <image name="icons8-white-add-reminder-24" width="24" height="24"/>
-        <image name="nochecklist" width="123" height="170"/>
-        <image name="noproject" width="200" height="200"/>
-        <image name="noremindersc" width="170" height="170"/>
-        <image name="note" width="326" height="326"/>
+        <image name="icons8-add-list-filled-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-add-user-group-man-white-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-admin-settings-male-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-alarm-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-calendar-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-checklist-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-clipboard-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-clock-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-edit-row-30" width="154.28572082519531" height="154.28572082519531"/>
+        <image name="icons8-ok-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-plus-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-queue-filled-30" width="154.28572082519531" height="154.28572082519531"/>
+        <image name="icons8-round-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-task-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-user-account-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-white-add-file-filled-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="icons8-white-add-reminder-24" width="157.09091186523438" height="157.09091186523438"/>
+        <image name="nochecklist" width="276.75" height="384"/>
+        <image name="noproject" width="450" height="450"/>
+        <image name="noremindersc" width="384" height="384"/>
+        <image name="note" width="735" height="735"/>
     </resources>
 </document>

@@ -22,6 +22,7 @@
 		C1EDF82B22801D8000E6AFD6 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDF82A22801D8000E6AFD6 /* WalkthroughPageViewController.swift */; };
 		C1EDF82D2280274600E6AFD6 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDF82C2280274600E6AFD6 /* WalkthroughViewController.swift */; };
 		C1EDF82F22803C2B00E6AFD6 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1EDF82E22803C2B00E6AFD6 /* Onboarding.storyboard */; };
+		C1EE3CC72284C6D600A5C203 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE3CC62284C6D600A5C203 /* TabViewController.swift */; };
 		F83FE832227D77C60027905A /* Pods_Colab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274D9BF6E8562A2D3E6FB95D /* Pods_Colab.framework */; };
 		F83FE834227D79290027905A /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE833227D79290027905A /* ReminderViewController.swift */; };
 		F89194A322813B41009A2E13 /* ColabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89194A222813B41009A2E13 /* ColabCell.swift */; };
@@ -75,6 +76,7 @@
 		C1EDF82A22801D8000E6AFD6 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		C1EDF82C2280274600E6AFD6 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		C1EDF82E22803C2B00E6AFD6 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		C1EE3CC62284C6D600A5C203 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		F83FE833227D79290027905A /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		F89194A222813B41009A2E13 /* ColabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabCell.swift; sourceTree = "<group>"; };
 		F89194A522813F6A009A2E13 /* ColabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabViewModel.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				F89194AB22821DD2009A2E13 /* AddMembersViewController.swift */,
 				F89194AD22821E29009A2E13 /* AddTaskViewController.swift */,
 				F89194AF22821EA4009A2E13 /* ProjectDetailsViewController.swift */,
+				C1EE3CC62284C6D600A5C203 /* TabViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				C1EDF82922801B9C00E6AFD6 /* WalkthroughContentViewController.swift in Sources */,
 				F8928120228274960014ADCE /* ContactCell.swift in Sources */,
 				F83FE834227D79290027905A /* ReminderViewController.swift in Sources */,
+				C1EE3CC72284C6D600A5C203 /* TabViewController.swift in Sources */,
 				F8928126228280D00014ADCE /* Assignee.swift in Sources */,
 				F8A0E337227F591B0084EDC0 /* CustomReminderCell.swift in Sources */,
 				C1EDF82B22801D8000E6AFD6 /* WalkthroughPageViewController.swift in Sources */,

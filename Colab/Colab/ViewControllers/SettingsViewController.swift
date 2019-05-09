@@ -26,6 +26,10 @@ class SettingsViewController: UIViewController {
             try
                 Auth.auth().signOut()
                  UserDefaults.standard.set(false, forKey: "userloggedIn")
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            if let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+                present(loginVC, animated: true, completion: nil)
+            }
                     
                  
         }catch{

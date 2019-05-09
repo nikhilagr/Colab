@@ -84,17 +84,17 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                if let index = walkthroughPageViewController?.currentIndex {
-                    switch index {
-                    case 0...2:
-                        walkthroughPageViewController?.forwardPage()
-                    case 3:
-                        UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
-                        dismiss(animated: true, completion: nil)
-        
-                    default: break
-                    }
-                }
+//                if let index = walkthroughPageViewController?.currentIndex {
+//                    switch index {
+//                    case 0...2:
+//                        walkthroughPageViewController?.forwardPage()
+//                    case 3:
+//                        UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
+//                        dismiss(animated: true, completion: nil)
+//
+//                    default: break
+//                    }
+//                }
                 //updateUI()
 
         // Do any additional setup after loading the view.
