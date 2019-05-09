@@ -23,9 +23,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
     
-        if UserDefaults.standard.bool(forKey: "userloggedIn") == true {
-            self.performSegue(withIdentifier: "loginSucess", sender: self)
-        }
+//        if UserDefaults.standard.bool(forKey: "userloggedIn") == true {
+//            self.performSegue(withIdentifier: "loginSucess", sender: self)
+//        }
 
     }
     
@@ -63,6 +63,7 @@ class LoginViewController: UIViewController {
                         UserDefaults.standard.set(true, forKey: "userloggedIn")
                         
                         self.performSegue(withIdentifier: "loginSucess", sender: self)
+                        
                         
                     }else{
                         
