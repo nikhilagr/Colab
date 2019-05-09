@@ -20,7 +20,6 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
     let currentUserID = Auth.auth().currentUser?.uid
     
     override func viewWillAppear(_ animated: Bool) {
-        
         readRemindersFromFirestore(userID:currentUserID ?? "")
     }
     
@@ -83,7 +82,7 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let ref = Firestore.firestore().collection(REMINDER_DB).whereField("user_id", isEqualTo: userID)
         
         ref.getDocuments { (querySnapShot, error) in
-
+            
             if error == nil {
                 for document in (querySnapShot?.documents)!{
                     let data = document.data()
