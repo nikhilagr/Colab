@@ -43,6 +43,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+   
+    func dateComponentFromNSDate(date: NSDate)-> DateComponents{
+        
+//        let calendarUnit: NSCalendar.Unit = [.hour, .day, .month, .year]
+        let calendar = Calendar.current
+        let dateComponents = calendar.dateComponents([.minute, .hour, .day, .month, .year], from: date as Date)
+        return dateComponents
+    }
+   
 
 
 }
