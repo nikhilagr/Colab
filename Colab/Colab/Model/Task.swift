@@ -20,6 +20,20 @@ class Task {
     private(set) var status: String!
     
     
+    var dictionary: [String: Any] {
+        
+        return [
+            "task_id":task_id,
+            "project_id":project_id,
+            "name":name,
+            "desc":desc,
+            "start_date":start_date,
+            "end_date":end_date,
+            "assigned_to":assigned_to,
+            "status":status
+        ]
+        
+    }
     
     init(taskId:String, projectId:String ,taskName:String, taskDesc: String,startDate:String, endDate:String,assignedTo:[String],status:String) {
         
@@ -33,16 +47,15 @@ class Task {
         self.status = status
         
     }
+    
+    
     init(taskName:String, taskDesc: String,startDate:String, endDate:String,assignedTo:[String]) {
         
-
         self.name = taskName
         self.desc = taskDesc
         self.start_date = startDate
         self.end_date = endDate
         self.assigned_to = assignedTo
-
-        
     }
     
 }

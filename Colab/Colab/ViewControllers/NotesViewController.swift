@@ -12,6 +12,9 @@ import Firebase
 
 class NotesViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
+    @IBOutlet weak var noDataLabel: UILabel!
+    @IBOutlet weak var noDataImage: UIImageView!
+    
     @IBOutlet weak var notesTableView: UITableView!
     @IBOutlet weak var fabAddButtonNote: UIButton!
     var notes: [Note] = []
@@ -42,6 +45,15 @@ class NotesViewController: UIViewController,UITableViewDataSource,UITableViewDel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "noteCell") as! NotesCell
+        
+        if notes.count > 0 {
+            noDataImage.isHidden = true
+            noDataLabel.isHidden = true
+        }else{
+            noDataImage.isHidden = false
+            noDataLabel.isHidden = false
+        }
+        
         cell.addNoteToCell(note: notes[indexPath.row])
         return cell
     }

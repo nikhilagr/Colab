@@ -20,6 +20,21 @@ class Colab{
     private(set) var creator_id: String!
     
     
+    var dictionary: [String: Any] {
+        
+        return [
+            "project_id":project_id,
+            "title":title,
+            "description":description,
+            "start_date":start_date,
+            "end_date":end_date,
+            "members":members,
+            "tasks":tasks,
+            "creator_id":creator_id
+        ]
+        
+    }
+    
     
     init(projectId:String,projectTitle:String,projectDesc:String,startDate:String,endDate:String,members:[String],tasks:[String],creatorId:String){
         self.project_id = projectId

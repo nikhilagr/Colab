@@ -200,35 +200,5 @@ class AddNewReminderViewController: UIViewController {
             }
         }
     }
-        
     
-    
-        
-        
-        
-        
-        
-//        eventStore.requestAccess(to: .event) { (granted, error) in
-//            if(granted) && (error == nil){
-//                let event: EKEvent = EKEvent(eventStore: eventStore)
-//                event.title = "add check event"
-//                event.startDate = Date()
-//                event.endDate = Date()
-//                event.calendar = eventStore.defaultCalendarForNewEvents
-//                do{
-//                    try eventStore.save(event, span: .thisEvent)
-//                }catch let error as NSError{
-//                    print("error:\(error)")
-//                }
-//                print("Save Event")
-//            }
-//            else{
-//                print("error: \(error)")
-//            }
-//        }
-    
-    
-
-
-
 }

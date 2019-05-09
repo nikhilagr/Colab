@@ -105,8 +105,9 @@ class RegistrationViewController: UIViewController {
 
                 
                         let db = Firestore.firestore()
-                        let ref = db.collection("users").document()
-                        let newUser = User(userId: ref.documentID, userauthId: (Auth.auth().currentUser?.uid)!,firstName:self.firstName, lastName:self.lastName, profileUrl: self.profileUrl, email:self.email, dob:self.dob)
+                        let ref = db.collection("users").document(Auth.auth().currentUser?.uid as? String ?? "")
+                        let newUser = User(userId: Auth.auth().currentUser?.uid as? String ?? "", firstName: self.firstName, lastName: self.lastName, profileUrl: self.profileUrl, email: self.email, dob: self.dob, fcmToken: "", projectList:[])
+//                        let newUser = User(userId: ref.documentID, userauthId: (Auth.auth().currentUser?.uid)!,firstName:self.firstName, lastName:self.lastName, profileUrl: self.profileUrl, email:self.email, dob:self.dob)
                         
                         ref.setData(newUser.dictionary, completion: { (error) in
                             

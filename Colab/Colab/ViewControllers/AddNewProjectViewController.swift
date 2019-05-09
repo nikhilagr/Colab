@@ -24,8 +24,10 @@ class AddNewProjectViewController: UIViewController,UITextViewDelegate {
     var contacts: [Contact] = []
     var tasks: [Task] = []
     var project: Colab? = nil
+    var taskIds: [String] = []
     
     let currentUserId: String = Auth.auth().currentUser?.uid ?? " "
+    let currentProjectId: String = Firestore.firestore().collection(PROJECT_DB).document().documentID
     
     override func viewDidLoad() {
         
@@ -254,11 +256,91 @@ extension AddNewProjectViewController: AddNewMemberProtocol{
     
     @objc func addTapped(){
         
+        //insert tasks in task db
+        for task in tasks{
+            insertTaskInFirestoreDB(task: task)
+        }
+        // insert project in project db you will need array of task id's
+            insertProjectInFirestoreDB()
+        // update users db insert project id to each member
+            updateProjectsInFireStoreUserDB(projectId: currentProjectId)
     }
     
     @objc func saveTapped() {
         
         
+    }
+    
+    
+    
+    func insertTaskInFirestoreDB(task: Task) {
+        
+        let docRef = Firestore.firestore().collection("tasks").document()
+        let taskId = docRef.documentID
+        self.taskIds.append(taskId)
+        
+        let newTask = Task(taskId: taskId, projectId: currentProjectId, taskName: task.name, taskDesc: task.desc, startDate: task.start_date, endDate: task.end_date, assignedTo: task.assigned_to, status: "0"
+        )
+        
+        docRef.setData(newTask.dictionary) { (error) in
+            if error == nil {
+                print("Task inserted succesfully!!")
+            }else{
+                print("Error while inserting task \(task.name)")
+            }
+        }
+    }
+    
+    func insertProjectInFirestoreDB(){
+        
+        var membersIds: [String] = []
+        
+        for member in members{
+            membersIds.append(member.user_id)
+        }
+        
+        let project = Colab(projectId: currentProjectId, projectTitle: newProjTitle.text ?? "", projectDesc: newProjDesc.text, startDate: newProjStartDate.text ?? " ", endDate: newProjEndDate.text ?? "", members:membersIds, tasks: taskIds, creatorId: currentUserId)
+        
+        let docRef = Firestore.firestore().collection("projects").document(currentProjectId)
+        
+        docRef.setData(project.dictionary) { (error) in
+            
+            if error == nil {
+                print("Project inserted succesfully!!")
+            }else{
+                print("Error while inserting project \(project.title)")
+            }
+        }
+    }
+    
+    func updateProjectsInFireStoreUserDB(projectId:String){
+        
+        for member in members{
+            
+            let docRef = Firestore.firestore().collection(USER_DB).document(member.user_id)
+            
+            docRef.getDocument { (doucmentSnapshot, error) in
+                
+                if error == nil {
+                    
+                    let data = doucmentSnapshot?.data()
+                    var projectIds: [String] = data?["projects"] as! [String]
+                    projectIds.append(projectId)
+                    
+                    docRef.updateData(["projects" : projectIds], completion: { (error) in
+                        
+                        if error == nil {
+                            print("successfully update project in users db")
+                        }else{
+                           print("Error in updating projects in updateProjectsInFireStoreUserDB")
+                        }
+                    })
+                    
+                }else{
+                    print("Error in retriving users in updateProjectsinFirestoreDB")
+                }
+            }
+        }
     }
     
 }

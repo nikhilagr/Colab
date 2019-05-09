@@ -16,6 +16,9 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var noDataLabel: UILabel!
+    @IBOutlet weak var noDataImage: UIImageView!
+    
     
     let currentUserId = Auth.auth().currentUser?.uid
     
@@ -83,6 +86,15 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if todos.count > 0 {
+            noDataImage.isHidden = true
+            noDataLabel.isHidden = true
+        }else{
+            
+            noDataImage.isHidden = false
+            noDataLabel.isHidden = false
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell") as! TodoCell
         cell.checklist = todos[indexPath.row]
         cell.congifure(checklist: todos[indexPath.row])
@@ -131,6 +143,7 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         docRef.delete { (error) in
             if error == nil {
                 print("Successfully deleted item \(checklistId)")
+                self.tableView.reloadData()
             }else{
                 print(error?.localizedDescription as Any)
             }

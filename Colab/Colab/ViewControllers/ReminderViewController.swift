@@ -16,6 +16,9 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var reminderTableView: UITableView!
     @IBOutlet weak var fabAddButton: UIButton!
     
+    @IBOutlet weak var noDataLabel: UILabel!
+    @IBOutlet weak var noDataImage: UIImageView!
+    
     var reminders: [Reminder] = []
     let currentUserID = Auth.auth().currentUser?.uid
     
@@ -38,6 +41,14 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "reminderCell" ) as! RemindersCell
+        
+        if reminders.count > 0 {
+            noDataImage.isHidden = true
+            noDataLabel.isHidden = true
+        }else{
+            noDataImage.isHidden = false
+            noDataLabel.isHidden = false
+        }
             //TODO: here indexpath is position of the cell
             cell.addReminderToCell(reminder: reminders[indexPath.row])
             return cell;

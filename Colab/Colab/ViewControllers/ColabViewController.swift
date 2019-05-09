@@ -16,7 +16,8 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
     @IBOutlet weak var colabCollectionView: UICollectionView!
     @IBOutlet weak var fabAddButton: UIButton!
     
-    
+    @IBOutlet weak var noDataImage: UIImageView!
+    @IBOutlet weak var noDataLabel: UILabel!
     
     let currentUserId : String = Auth.auth().currentUser?.uid ?? " "
     
@@ -46,6 +47,13 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        if projects.count > 0 {
+            noDataImage.isHidden = true
+            noDataLabel.isHidden = true
+        }else{
+            noDataImage.isHidden = false
+            noDataLabel.isHidden = false
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colabCell", for: indexPath) as! ColabCell
         cell.addDetailsToCell(project:projects[indexPath.row])
         cell.projectImage.image = UIImage(named: "projim1")
