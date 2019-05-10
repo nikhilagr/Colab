@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EditbuttonDelegate{
+    func editButtonTapped(at index:IndexPath)
+}
+
 class ColabCell: UICollectionViewCell {
     
     @IBOutlet weak var projectTitleTF: UILabel!
@@ -18,6 +22,9 @@ class ColabCell: UICollectionViewCell {
     @IBOutlet weak var projectDescTF: UILabel!
     @IBOutlet weak var projectImage: UIImageView!
     
+    var delegate: EditbuttonDelegate!
+    var indexPath:IndexPath!
+    
 
     func addDetailsToCell(project: ColabViewModel){
         
@@ -27,13 +34,12 @@ class ColabCell: UICollectionViewCell {
         totalTasksTF.text = project.project_tasks
         projectDueTF.text = project.project_due
         projectDescTF.text = project.project_desc
-        
     
-        
     }
     
     @IBAction func onEditAction(_ sender: Any) {
         
+        self.delegate?.editButtonTapped(at: self.indexPath)
     }
     
 }
