@@ -11,8 +11,8 @@ import Foundation
 import Firebase
 import FirebaseAuth
 
-class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-    
+class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,EditbuttonDelegate {
+
     @IBOutlet weak var colabCollectionView: UICollectionView!
     @IBOutlet weak var fabAddButton: UIButton!
     
@@ -22,6 +22,7 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
     let currentUserId : String = Auth.auth().currentUser?.uid ?? " "
     
     var projects: [ColabViewModel] = []
+    var projs: [Colab] = []
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +58,8 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colabCell", for: indexPath) as! ColabCell
         cell.addDetailsToCell(project:projects[indexPath.row])
         cell.projectImage.image = UIImage(named: "projim1")
+        cell.delegate = self
+        cell.indexPath = indexPath
         cell.contentView.layer.cornerRadius = 4.0
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = UIColor.clear.cgColor
@@ -72,10 +75,22 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
         return cell;
     }
     
+    func editButtonTapped(at index: IndexPath) {
+        // TO take boj at index and pass to AddnewViewController
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let newProjVC = storyBoard.instantiateViewController(withIdentifier: "AddNewProjectViewController") as? AddNewProjectViewController {
+            
+            newProjVC.project = projs[index.row]
+            self.navigationController?.pushViewController(newProjVC, animated: true)
+            
+        }
+        
+    }
     
     func readProjectsFromFireStoreDb(userId: String){
         
         projects = []
+        projs = []
         
         let docRef = Firestore.firestore().collection("users").document(currentUserId)
         
@@ -109,6 +124,8 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
                             
                             
                             let projectC = Colab(projectId:project_id, projectTitle: title, projectDesc: description, startDate: start_date, endDate: end_date, members: members, tasks: tasks,creatorId: creator)
+                            
+                           self.projs.append(projectC)
                             
                             let creatorDocRef = Firestore.firestore().collection("users").document(creator)
                             
@@ -152,6 +169,7 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
         }
     }
     
+
 
 }
 

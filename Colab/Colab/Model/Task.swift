@@ -10,14 +10,14 @@ import Foundation
 
 class Task {
     
-    private(set) var task_id: String!
-    private(set) var project_id: String!
-    private(set) var name: String!
-    private(set) var desc: String!
-    private(set) var start_date: String!
-    private(set) var end_date: String!
-    private(set) var assigned_to : [String]!
-    private(set) var status: String!
+    public var task_id: String!
+    public var project_id: String!
+    public var name: String!
+    public var desc: String!
+    public var start_date: String!
+    public var end_date: String!
+    public var assigned_to : [String]!
+    public var status: String!
     
     
     var dictionary: [String: Any] {
@@ -34,6 +34,10 @@ class Task {
         ]
         
     }
+    
+    
+    
+    
     
     init(taskId:String, projectId:String ,taskName:String, taskDesc: String,startDate:String, endDate:String,assignedTo:[String],status:String) {
         
