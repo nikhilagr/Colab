@@ -17,6 +17,7 @@ let NOTE_DB = "notes"
 let REMINDER_DB = "reminders"
 let PROJECT_DB = "projects"
 let USER_DB = "users"
+let TASK_DB = "tasks"
 
 
 

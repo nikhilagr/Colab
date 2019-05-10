@@ -75,6 +75,17 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
         return cell;
     }
     
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let colabTaskViewController = storyboard.instantiateViewController(withIdentifier: "ColabTaskViewController") as?  ColabTaskViewController{
+            //print("This is the value of indexpath.row: \(indexPath.row)")
+            colabTaskViewController.project = projs[indexPath.row]
+            self.navigationController?.pushViewController(colabTaskViewController, animated: true)
+        }
+    }
+    
+
     func editButtonTapped(at index: IndexPath) {
         // TO take boj at index and pass to AddnewViewController
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -86,6 +97,7 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
         }
         
     }
+
     
     func readProjectsFromFireStoreDb(userId: String){
         
@@ -125,7 +137,9 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
                             
                             let projectC = Colab(projectId:project_id, projectTitle: title, projectDesc: description, startDate: start_date, endDate: end_date, members: members, tasks: tasks,creatorId: creator)
                             
+
                            self.projs.append(projectC)
+
                             
                             let creatorDocRef = Firestore.firestore().collection("users").document(creator)
                             
