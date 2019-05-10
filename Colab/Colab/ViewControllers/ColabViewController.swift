@@ -43,11 +43,6 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return projects.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if projects.count > 0 {
             noDataImage.isHidden = true
             noDataLabel.isHidden = true
@@ -55,6 +50,13 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
             noDataImage.isHidden = false
             noDataLabel.isHidden = false
         }
+        
+        return projects.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colabCell", for: indexPath) as! ColabCell
         cell.addDetailsToCell(project:projects[indexPath.row])
         cell.projectImage.image = UIImage(named: "projim1")

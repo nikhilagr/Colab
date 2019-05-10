@@ -28,7 +28,7 @@ class AddNewProjectViewController: UIViewController,UITextViewDelegate {
     var taskIds: [String] = []
     var oldMembers: [User] = []
     
-    
+
     let currentUserId: String = Auth.auth().currentUser?.uid ?? " "
     let currentProjectId: String = Firestore.firestore().collection(PROJECT_DB).document().documentID
     
@@ -50,6 +50,12 @@ class AddNewProjectViewController: UIViewController,UITextViewDelegate {
         newProjDesc.layer.borderColor = UIColor.lightGray.cgColor
         newProjDesc.layer.cornerRadius = 4.0
         
+        
+
+    
+      newProjStartDate.addInputViewDatePicker(target: self, selector: #selector(doneButtonStartPressed))
+       newProjEndDate.addInputViewDatePicker(target: self, selector: #selector(doneButtonPressed))
+ 
         
         if project != nil {
             
@@ -355,6 +361,7 @@ extension AddNewProjectViewController: AddNewMemberProtocol{
             insertProjectInFirestoreDB()
         // update users db insert project id to each member
             addProjectsInFireStoreUserDB(projectId: currentProjectId)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func saveTapped() {
@@ -371,6 +378,8 @@ extension AddNewProjectViewController: AddNewMemberProtocol{
       // update users db insert project id to each member
         
         updateProjectsInFireStoreUserDB(projectId: project?.project_id ?? "")
+        
+        self.navigationController?.popViewController(animated: true)
         
     }
 
@@ -399,7 +408,7 @@ extension AddNewProjectViewController: AddNewMemberProtocol{
         let docRef = Firestore.firestore().collection("tasks").document(task.task_id)
         let taskId = docRef.documentID
         self.taskIds.append(taskId)
-        let newTask = Task(taskId: task.task_id, projectId: task.project_id, taskName: task.name, taskDesc: task.desc, startDate: task.start_date, endDate: task.end_date, assignedTo: task.assigned_to, status: task.status
+        let newTask = Task(taskId: task.task_id, projectId: project?.project_id ?? " Inc", taskName: task.name, taskDesc: task.desc, startDate: task.start_date, endDate: task.end_date, assignedTo: task.assigned_to, status: task.status
         )
         
         docRef.updateData(newTask.dictionary) { (error) in
@@ -633,6 +642,61 @@ extension AddNewProjectViewController: AddNewTaskProtocol,UpdateTaskProtocol{
     }
     
     
+    @objc func viewTapped(gestureRecognizer:UITapGestureRecognizer){
+        view.endEditing(true)
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        newProjStartDate.text = dateFormatter.string(from: datePicker.date)
+        //view.endEditing(true)
+    }
+    
+    
+    @objc func doneButtonPressed() {
+        if let  datePicker = self.newProjEndDate.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            self.newProjEndDate.text = dateFormatter.string(from: datePicker.date)
+        }
+        self.newProjEndDate.resignFirstResponder()
+    }
+    
+    @objc func doneButtonStartPressed() {
+        if let  datePicker = self.newProjStartDate.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            self.newProjStartDate.text = dateFormatter.string(from: datePicker.date)
+        }
+        self.newProjStartDate.resignFirstResponder()
+    }
 }
 
 
+extension UITextField {
+    
+    func addInputViewDatePicker(target: Any, selector: Selector) {
+        
+        let screenWidth = UIScreen.main.bounds.width
+        
+        //Add DatePicker as inputView
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 216))
+        datePicker.datePickerMode = .date
+        self.inputView = datePicker
+        
+        //Add Tool Bar as input AccessoryView
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 44))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelBarButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPressed))
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: target, action: selector)
+        toolBar.setItems([cancelBarButton, flexibleSpace, doneBarButton], animated: false)
+        
+        self.inputAccessoryView = toolBar
+    }
+    
+    @objc func cancelPressed() {
+        self.resignFirstResponder()
+    }
+}

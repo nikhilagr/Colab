@@ -55,7 +55,8 @@ class AddTaskViewController: UIViewController,UITextViewDelegate {
         let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveTapped))
         saveButton.tintColor = UIColor.white
         
-        
+        taskStartDate.addInputViewDatePicker2(target: self, selector: #selector(doneButtonStartPressed))
+        taskEndDate.addInputViewDatePicker2(target: self, selector: #selector(doneButtonPressed))
         if task != nil {
             
             print("IN EDIT MODE")
@@ -119,6 +120,24 @@ class AddTaskViewController: UIViewController,UITextViewDelegate {
     }
 
 
+    @objc func doneButtonPressed() {
+        if let  datePicker = self.taskEndDate.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            self.taskEndDate.text = dateFormatter.string(from: datePicker.date)
+        }
+        self.taskEndDate.resignFirstResponder()
+    }
+    
+    @objc func doneButtonStartPressed() {
+        if let  datePicker = self.taskStartDate.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            self.taskStartDate.text = dateFormatter.string(from: datePicker.date)
+        }
+        self.taskStartDate.resignFirstResponder()
+    }
+    
 }
 
 
@@ -188,6 +207,33 @@ extension AddTaskViewController: UITableViewDataSource,UITableViewDelegate {
         let newTask = Task(taskId: task?.task_id ?? "", projectId: task?.project_id ??  " ", taskName: taskName ?? "test", taskDesc:taskDesc ?? "test" , startDate:  taskStartDate ?? "test", endDate: taskEndDate ?? "test" , assignedTo: assigneeList, status: task?.status ?? "")
         self.updateTaskProtocol.updatedTask(task: newTask)
         
+          _ = navigationController?.popViewController(animated: true)
+        
     }
     
+}
+extension UITextField {
+    
+    func addInputViewDatePicker2(target: Any, selector: Selector) {
+        
+        let screenWidth = UIScreen.main.bounds.width
+        
+        //Add DatePicker as inputView
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 216))
+        datePicker.datePickerMode = .date
+        self.inputView = datePicker
+        
+        //Add Tool Bar as input AccessoryView
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 44))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelBarButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPressed))
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: target, action: selector)
+        toolBar.setItems([cancelBarButton, flexibleSpace, doneBarButton], animated: false)
+        
+        self.inputAccessoryView = toolBar
+    }
+    
+    @objc func cancelPressed2() {
+        self.resignFirstResponder()
+    }
 }

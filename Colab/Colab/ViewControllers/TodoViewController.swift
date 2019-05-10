@@ -80,12 +80,6 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(todos.count)
-        return todos.count
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if todos.count > 0 {
             noDataImage.isHidden = true
             noDataLabel.isHidden = true
@@ -94,6 +88,13 @@ class TodoViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             noDataImage.isHidden = false
             noDataLabel.isHidden = false
         }
+        return todos.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell") as! TodoCell
         cell.checklist = todos[indexPath.row]

@@ -126,11 +126,13 @@ class AddNewReminderViewController: UIViewController {
     @IBAction func addNewReminderAction(_ sender: UIButton) {
         
         insertReminderInFirestoreDB(userId: currentUserId)
+          _ = navigationController?.popViewController(animated: true)
     }
     
     @IBAction func saveReminderAction(_ sender: UIButton) {
        
         updateReminderInFireStoreDB(reminderID: reminder?.reminder_id ?? " ")
+          _ = navigationController?.popViewController(animated: true)
     }
     
     

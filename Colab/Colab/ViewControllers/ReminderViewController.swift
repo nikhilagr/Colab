@@ -36,12 +36,6 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return reminders.count;
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "reminderCell" ) as! RemindersCell
-        
         if reminders.count > 0 {
             noDataImage.isHidden = true
             noDataLabel.isHidden = true
@@ -49,6 +43,14 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
             noDataImage.isHidden = false
             noDataLabel.isHidden = false
         }
+        
+        return reminders.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "reminderCell" ) as! RemindersCell
+        
+ 
             //TODO: here indexpath is position of the cell
             cell.addReminderToCell(reminder: reminders[indexPath.row])
             return cell;

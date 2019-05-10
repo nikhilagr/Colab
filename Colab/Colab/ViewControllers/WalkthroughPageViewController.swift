@@ -20,7 +20,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     weak var walkthroughDelegate: WalkthroughPageViewControllerDelegate?
     
     var pageHeadings = ["Colab", "Reminders", "Checklist", "Notes"]
-    var pageImages = ["onboarding-4", "onboarding-3", "onboarding-1", "onboarding-2"]
+    var pageImages = ["onboarding-4", "onboarding-3", "checklist", "onboarding-2"]
     var pageSubHeadings = ["Easy collaboration with team anywhere, anytime!", "Add events, reminders for any date and time!", "Create your daily todo list!", "Create and save your notes, access them anywhere from the globe!"]
     
     var currentIndex = 0

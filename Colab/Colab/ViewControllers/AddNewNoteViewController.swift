@@ -104,11 +104,13 @@ class AddNewNoteViewController: UIViewController, UITextViewDelegate {
     
     @objc func addTapped(){
         insertNoteInFirestoreDB(userId: currentUserId)
+          _ = navigationController?.popViewController(animated: true)
     }
     
     @objc func saveTapped() {
         
         updateNoteInFireStoreDB(noteID: note?.note_id ?? " ")
+          _ = navigationController?.popViewController(animated: true)
     }
     
 }

@@ -53,7 +53,7 @@ class RegistrationViewController: UIViewController {
     @objc func dateChanged(datePicker: UIDatePicker){
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateStyle = .medium
         dobTF.text = dateFormatter.string(from: datePicker.date)
         //view.endEditing(true)
     }

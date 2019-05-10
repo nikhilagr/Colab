@@ -28,6 +28,7 @@ class NotesViewController: UIViewController,UITableViewDataSource,UITableViewDel
         fabAddButtonNote.layer.cornerRadius = fabAddButtonNote.frame.height/2
         notesTableView.rowHeight = UITableView.automaticDimension
         notesTableView.estimatedRowHeight = 100
+        
         self.notesTableView.reloadData()
         
     }
@@ -39,13 +40,6 @@ class NotesViewController: UIViewController,UITableViewDataSource,UITableViewDel
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-      return notes.count
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "noteCell") as! NotesCell
-        
         if notes.count > 0 {
             noDataImage.isHidden = true
             noDataLabel.isHidden = true
@@ -54,13 +48,20 @@ class NotesViewController: UIViewController,UITableViewDataSource,UITableViewDel
             noDataLabel.isHidden = false
         }
         
+      return notes.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "noteCell") as! NotesCell
+
         cell.addNoteToCell(note: notes[indexPath.row])
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 100
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//            return 90
+//    }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
