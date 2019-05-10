@@ -22,6 +22,7 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
     let currentUserId : String = Auth.auth().currentUser?.uid ?? " "
     
     var projects: [ColabViewModel] = []
+    var projs: [Colab] = []
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,10 +73,20 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
         return cell;
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let colabTaskViewController = storyboard.instantiateViewController(withIdentifier: "ColabTaskViewController") as?  ColabTaskViewController{
+            //print("This is the value of indexpath.row: \(indexPath.row)")
+            colabTaskViewController.project = projs[indexPath.row]
+            self.navigationController?.pushViewController(colabTaskViewController, animated: true)
+        }
+    }
+    
     
     func readProjectsFromFireStoreDb(userId: String){
         
         projects = []
+        projs = []
         
         let docRef = Firestore.firestore().collection("users").document(currentUserId)
         
@@ -109,6 +120,8 @@ class ColabViewController: UIViewController,UICollectionViewDelegate,UICollectio
                             
                             
                             let projectC = Colab(projectId:project_id, projectTitle: title, projectDesc: description, startDate: start_date, endDate: end_date, members: members, tasks: tasks,creatorId: creator)
+                            
+                            self.projs.append(projectC)
                             
                             let creatorDocRef = Firestore.firestore().collection("users").document(creator)
                             

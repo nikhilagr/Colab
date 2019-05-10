@@ -28,15 +28,35 @@ class RegistrationViewController: UIViewController {
     var dob: String = ""
     var profileUrl: String = ""
     
-    
+    // declaring a variable of type dataPicker
+    var datePicker: UIDatePicker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        // adding action to display date once the value is changed in the datepicker
+        datePicker?.addTarget(self, action: #selector(RegistrationViewController.dateChanged(datePicker:)), for: .valueChanged)
+        
+        // adding tap gesture recognier to dismiss the date picker on tapping anywhere on the screen
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegistrationViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(tapGestureRecognizer)
+        dobTF.inputView = datePicker
+        
     }
     
-    
-    
+    @objc func viewTapped(gestureRecognizer:UITapGestureRecognizer){
+        view.endEditing(true)
+    }
+ 
+    @objc func dateChanged(datePicker: UIDatePicker){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dobTF.text = dateFormatter.string(from: datePicker.date)
+        //view.endEditing(true)
+    }
     
     @IBAction func onRegistrationTap(_ sender: Any) {
         

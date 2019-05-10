@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C10EF11122815ECE00BFC564 /* ReminderNotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10EF11022815ECE00BFC564 /* ReminderNotify.swift */; };
 		C11A722B2284CE9600D730B6 /* ColabTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A722A2284CE9600D730B6 /* ColabTaskViewController.swift */; };
+		C11A722D2284E0C900D730B6 /* ColabTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A722C2284E0C900D730B6 /* ColabTaskCell.swift */; };
 		C19E5FBE22601EE900EEE918 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FBD22601EE900EEE918 /* Checklist.swift */; };
 		C19E5FC02260203700EEE918 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FBF2260203700EEE918 /* Note.swift */; };
 		C19E5FC22260215000EEE918 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5FC12260215000EEE918 /* Reminder.swift */; };
@@ -64,6 +65,7 @@
 		7A5AC1E42B940D139F90DC23 /* Pods-Colab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Colab/Pods-Colab.debug.xcconfig"; sourceTree = "<group>"; };
 		C10EF11022815ECE00BFC564 /* ReminderNotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderNotify.swift; sourceTree = "<group>"; };
 		C11A722A2284CE9600D730B6 /* ColabTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabTaskViewController.swift; sourceTree = "<group>"; };
+		C11A722C2284E0C900D730B6 /* ColabTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabTaskCell.swift; sourceTree = "<group>"; };
 		C19E5FBD22601EE900EEE918 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		C19E5FBF2260203700EEE918 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C19E5FC12260215000EEE918 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				F8A0E334227F58B40084EDC0 /* cells */,
 				C1A87BF82272F3AB005468BB /* TodoCell.swift */,
+				C11A722C2284E0C900D730B6 /* ColabTaskCell.swift */,
 				F892811B228274430014ADCE /* MemberCell.swift */,
 				F8A0E32E227E4E790084EDC0 /* NotesCell.swift */,
 				F8A0E330227E4F890084EDC0 /* RemindersCell.swift */,
@@ -435,6 +438,7 @@
 				C1A87BF92272F3AB005468BB /* TodoCell.swift in Sources */,
 				C19E5FC02260203700EEE918 /* Note.swift in Sources */,
 				C1A87BF62272F2E6005468BB /* SettingsViewController.swift in Sources */,
+				C11A722D2284E0C900D730B6 /* ColabTaskCell.swift in Sources */,
 				F89194A822815223009A2E13 /* Colab.swift in Sources */,
 				F892812422827E730014ADCE /* Contact.swift in Sources */,
 				F8A0E33B227F7B160084EDC0 /* AddNewTodoViewController.swift in Sources */,
