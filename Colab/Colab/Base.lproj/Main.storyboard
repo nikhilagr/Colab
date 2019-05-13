@@ -329,7 +329,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlW-vX-gA4">
-                                                    <rect key="frame" x="25" y="23" width="106" height="21"/>
+                                                    <rect key="frame" x="25" y="23" width="369" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1245,23 +1245,31 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-xx-orz">
                                                     <rect key="frame" x="36" y="19" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="DdS-84-WVu"/>
+                                                        <constraint firstAttribute="height" constant="24" id="baK-gk-jWA"/>
+                                                    </constraints>
                                                     <state key="normal" backgroundImage="icons8-round-24"/>
                                                     <state key="selected" backgroundImage="icons8-ok-24"/>
                                                     <connections>
                                                         <action selector="onCheckboxTap:" destination="qWT-r3-znC" eventType="touchUpInside" id="UJ9-rd-Ih4"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Todo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGi-Vv-OxQ">
-                                                    <rect key="frame" x="76" y="22" width="296" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Todo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGi-Vv-OxQ">
+                                                    <rect key="frame" x="76" y="11" width="318" height="39"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="IxQ-xx-orz" firstAttribute="leading" secondItem="YSR-rU-w1i" secondAttribute="leadingMargin" constant="16" id="UVA-Yn-vW7"/>
-                                                <constraint firstItem="IxQ-xx-orz" firstAttribute="top" secondItem="YSR-rU-w1i" secondAttribute="topMargin" constant="8" id="alr-5p-r48"/>
+                                                <constraint firstItem="IxQ-xx-orz" firstAttribute="leading" secondItem="YSR-rU-w1i" secondAttribute="leadingMargin" constant="16" id="AQe-wy-TBn"/>
+                                                <constraint firstItem="sGi-Vv-OxQ" firstAttribute="leading" secondItem="YSR-rU-w1i" secondAttribute="leading" constant="76" id="DdY-cQ-V2n"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="IxQ-xx-orz" secondAttribute="bottom" constant="7" id="XW1-dh-O7a"/>
+                                                <constraint firstAttribute="bottom" secondItem="sGi-Vv-OxQ" secondAttribute="bottom" constant="10.666666666666664" id="hz1-2c-O0Z"/>
+                                                <constraint firstAttribute="trailing" secondItem="sGi-Vv-OxQ" secondAttribute="trailing" constant="20" id="lWg-ni-Axl"/>
+                                                <constraint firstItem="IxQ-xx-orz" firstAttribute="top" secondItem="YSR-rU-w1i" secondAttribute="topMargin" constant="8" id="oKB-Cs-1I1"/>
+                                                <constraint firstItem="sGi-Vv-OxQ" firstAttribute="top" secondItem="YSR-rU-w1i" secondAttribute="top" constant="11" id="qU2-q6-eF5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
