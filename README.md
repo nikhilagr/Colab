@@ -24,10 +24,22 @@ Required Must-have Stories
 
 * New user can register through app.     
 * Active user must be able to login into app.
-* Can create personalized to do list.
-* Can set reminders for an event.
-* Can create notes to save personal details.
-* A user can create a project and add members, assign task set deadlines.
+
+* [x] A user can create a project and add members, assign task set deadlines.
+
+<img src = "http://g.recordit.co/0EM5cjnrxR.gif">
+
+* [X] Can create personalized to do list.
+
+<img src = "http://g.recordit.co/4iT6cwoCms.gif">
+
+* [x] Can create notes to save personal details.
+
+<img src = "http://g.recordit.co/wuQe0l6UaK.gif">
+
+* [X] Can set reminders for an event.
+
+<img src = "http://g.recordit.co/gUeT89nBKf.gif">
 
 Optional Nice-to-have Stories
 * Integrate with Apple calender.
